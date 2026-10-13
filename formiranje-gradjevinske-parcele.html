@@ -202,21 +202,48 @@ p{margin:0}
 .foot-bottom{margin-top:56px;padding-top:22px;border-top:1px solid #22385E;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.875rem;color:#8798B3}
 
 /* direct contact widget */
-.dc{position:fixed;right:22px;bottom:22px;z-index:60;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
-.dc-toggle{display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:#fff;border:0;border-radius:999px;padding:14px 20px 14px 16px;font-family:var(--head);font-weight:700;font-size:1rem;cursor:pointer}
-.dc-toggle:hover{background:var(--blue-dark)}
-.dc-toggle .icon{width:22px;height:22px}
-.dc-panel{width:300px;background:#fff;border:1px solid var(--line-strong);border-radius:10px;overflow:hidden;display:none}
-.dc.open .dc-panel{display:block}
-.dc-head{background:var(--navy);color:#fff;padding:18px 20px}
-.dc-head strong{display:block;font-family:var(--head);font-size:1.05rem}
-.dc-head span{display:block;font-size:.87rem;color:#B8C6DC;margin-top:4px;line-height:1.45}
-.dc-list{list-style:none;margin:0;padding:8px}
-.dc-list a{display:flex;align-items:center;gap:14px;padding:12px;border-radius:var(--radius);color:var(--ink);font-weight:600}
-.dc-list a:hover{background:var(--tint);color:var(--ink)}
-.dc-list .ic{width:38px;height:38px;border-radius:50%;background:var(--tint);color:var(--blue);display:flex;align-items:center;justify-content:center;flex:none}
-.dc-list .ic .icon{width:19px;height:19px}
-.dc-list small{display:block;font-weight:400;color:var(--muted);font-size:.84rem;line-height:1.3}
+.dc{position:fixed;right:22px;bottom:22px;z-index:60;display:flex;flex-direction:column;align-items:flex-end;gap:14px}
+.dc-toggle{position:relative;display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--ink);border:1px solid var(--line-strong);border-radius:999px;padding:12px 22px 12px 14px;font-family:var(--head);font-weight:700;font-size:1.02rem;cursor:pointer;box-shadow:0 6px 20px rgba(12,30,59,.14);transition:border-color .15s ease,transform .15s ease}
+.dc-toggle:hover{border-color:var(--blue);transform:translateY(-1px)}
+.dc-toggle-ic{width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center}
+.dc-toggle-ic .icon{width:19px;height:19px}
+.dc-badge{position:absolute;top:2px;right:6px;width:12px;height:12px;border-radius:50%;background:#E5322D;border:2px solid #fff}
+.dc.seen .dc-badge{display:none}
+.dc-panel{width:340px;background:#fff;border:1px solid var(--line-strong);border-radius:14px;overflow:hidden;display:none;box-shadow:0 18px 50px rgba(12,30,59,.18)}
+.dc.open .dc-panel{display:block;animation:dc-in .18s ease-out}
+@keyframes dc-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.dc-head{background:var(--navy);color:#fff;padding:18px 18px 18px 20px;display:flex;align-items:center;gap:14px}
+.dc-avatar{position:relative;flex:none;width:52px;height:52px;border-radius:50%;background:var(--blue);color:#fff;font-family:var(--head);font-weight:800;font-size:1.05rem;letter-spacing:.02em;display:flex;align-items:center;justify-content:center;border:2px solid #fff}
+.dc-dot{position:absolute;right:-1px;bottom:1px;width:13px;height:13px;border-radius:50%;background:#2BC266;border:2px solid var(--navy)}
+.dc.away .dc-dot{background:#9AA6B8}
+.dc-who{flex:1;min-width:0}
+.dc-who strong{display:block;font-family:var(--head);font-size:1.12rem;line-height:1.2}
+.dc-status{display:block;font-size:.86rem;color:#B8C6DC;margin-top:4px;line-height:1.4}
+.dc-close{align-self:flex-start;background:none;border:0;color:#B8C6DC;cursor:pointer;padding:4px;margin:-4px -4px 0 0;border-radius:6px}
+.dc-close:hover{color:#fff}
+.dc-close .icon{width:18px;height:18px}
+.dc-body{padding:14px 18px 6px;background:#fff}
+.dc-time{display:block;text-align:center;font-size:.75rem;color:var(--muted);margin-bottom:12px;min-height:1em}
+.dc-msg{display:flex;align-items:flex-end;gap:10px}
+.dc-avatar--sm{width:30px;height:30px;font-size:.68rem;border:0}
+.dc-bubble{background:#F0F2F6;color:var(--ink);border-radius:16px 16px 16px 4px;padding:13px 16px;font-size:.97rem;line-height:1.5;min-height:46px}
+.dc-text{display:none}
+.dc-bubble.done .dc-text{display:block;animation:dc-in .2s ease-out}
+.dc-typing{display:none;gap:4px;align-items:center;height:20px}
+.dc-bubble.typing .dc-typing{display:inline-flex}
+.dc-typing i{width:7px;height:7px;border-radius:50%;background:#9AA6B8;animation:dc-blink 1s infinite}
+.dc-typing i:nth-child(2){animation-delay:.15s}
+.dc-typing i:nth-child(3){animation-delay:.3s}
+@keyframes dc-blink{0%,80%,100%{opacity:.3}40%{opacity:1}}
+.dc-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:16px 18px 8px}
+.dc-btn{display:flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;padding:13px 10px;font-family:var(--head);font-weight:700;font-size:1.02rem;color:#fff;transition:background .15s ease}
+.dc-btn .icon{width:20px;height:20px}
+.dc-btn--wa{background:#10843F}
+.dc-btn--wa:hover{background:#0B6E33;color:#fff}
+.dc-btn--viber{background:#6750E8}
+.dc-btn--viber:hover{background:#5440CF;color:#fff}
+.dc-call{display:block;text-align:center;font-size:.9rem;color:var(--muted);padding:6px 0 16px}
+.dc-call:hover{color:var(--blue)}
 
 /* responsive */
 @media (max-width:1020px){
@@ -273,11 +300,10 @@ p{margin:0}
   .chat-row .btn{flex:1 1 100%}
   .foot-grid{grid-template-columns:1fr;gap:36px}
   .dc{right:14px;bottom:14px}
-  .dc-toggle .label{display:none}
-  .dc-toggle{padding:16px}
-  .dc-panel{width:calc(100vw - 28px);max-width:340px}
+  .dc-toggle{padding:10px 18px 10px 10px;font-size:.98rem}
+  .dc-panel{width:calc(100vw - 28px);max-width:360px}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;animation:none!important}}
 
 /* ===== inner pages ===== */
 .page-hero{background-color:var(--soft);background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:48px 48px;background-position:-1px -1px;border-bottom:1px solid var(--line);padding:56px 0 72px;position:relative}
@@ -452,6 +478,42 @@ p{margin:0}
 .guide>*+*{margin-top:16px}
 .guide>h2+p{margin-top:12px}
 .guide>h3{margin-top:30px}
+
+/* ===== home hero with video ===== */
+.hero--video{padding:0;min-height:min(780px,calc(100vh - 126px));display:flex;align-items:center;background:var(--navy) url("intergeo-hero.jpg") center/cover no-repeat;color:#fff;isolation:isolate}
+.hero--video .wrap{display:block;width:100%;padding-top:96px;padding-bottom:104px}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(12,30,59,.94) 0%,rgba(12,30,59,.86) 38%,rgba(12,30,59,.45) 72%,rgba(12,30,59,.25) 100%),linear-gradient(0deg,rgba(12,30,59,.55) 0%,rgba(12,30,59,0) 40%)}
+.hero-copy{max-width:640px}
+.hero--video .kicker{color:var(--yellow)}
+.hero--video .kicker::before{background:var(--yellow)}
+.hero--video h1{color:#fff}
+.hero--video .lead{color:#D5DEEB}
+.hero--video .hero-note{color:#B8C6DC}
+.hero--video .hero-note a{color:#fff}
+.hero--video .btn{background:#fff;border-color:#fff;color:var(--navy)}
+.hero--video .btn:hover{background:var(--yellow);border-color:var(--yellow);color:var(--navy)}
+.hero-rating{margin-top:34px;display:inline-flex;align-items:center;gap:12px;padding:10px 16px;border:1px solid rgba(255,255,255,.28);border-radius:8px;color:#fff;font-size:.93rem;background:rgba(12,30,59,.35)}
+.hero-rating:hover{color:#fff;border-color:rgba(255,255,255,.6)}
+.hero-rating b{font-family:var(--head);font-size:1.35rem;font-weight:800}
+.hero-pause{position:absolute;left:24px;bottom:22px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(12,30,59,.45);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.hero-pause:hover{border-color:#fff}
+.hero-pause .icon{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.hero-pause .i-play{display:none;fill:currentColor;stroke:none}
+.hero-pause.paused .i-pause{display:none}
+.hero-pause.paused .i-play{display:block}
+@media (min-width:1400px){.hero-pause{left:calc((100vw - 1100px)/2 - 64px)}}
+@media (max-width:768px){
+  .hero--video{min-height:auto;background-position:62% center}
+  .hero--video .wrap{padding-top:64px;padding-bottom:88px}
+  .hero-video{object-position:62% center}
+  .hero-shade{background:linear-gradient(180deg,rgba(12,30,59,.66) 0%,rgba(12,30,59,.78) 45%,rgba(12,30,59,.9) 100%)}
+  .hero-rating{margin-top:26px;gap:8px;padding:9px 12px;font-size:.84rem}
+  .hero-rating b{font-size:1.2rem}
+  .hero-rating span{white-space:nowrap}
+  .hero-rating .stars svg{width:13px;height:13px}
+  .hero-pause{left:auto;right:auto;left:20px;bottom:18px;width:36px;height:36px}
+}
 </style>
 </head>
 <body>
@@ -621,27 +683,58 @@ p{margin:0}
 </footer>
 
 <div class="dc" id="dc">
-  <div class="dc-panel" id="dc-panel" role="dialog" aria-label="Direktan kontakt">
+  <div class="dc-panel" id="dc-panel" role="dialog" aria-modal="false" aria-labelledby="dc-name">
     <div class="dc-head">
-      <strong>Pišite direktno Slaviši</strong>
-      <span>Slaviša Matić, vlasnik studija. Odgovara lično, svaki dan od 7 do 21h.</span>
+      <span class="dc-avatar" aria-hidden="true">SM<i class="dc-dot"></i></span>
+      <span class="dc-who">
+        <strong id="dc-name">Slaviša Matić</strong>
+        <span class="dc-status" id="dc-status">Odgovaram lično, svaki dan od 7 do 21h</span>
+      </span>
+      <button class="dc-close" type="button" aria-label="Zatvori"><svg class="icon"><use href="#i-x"/></svg></button>
     </div>
-    <ul class="dc-list">
-      <li><a href="viber://chat?number=%2B38163320380"><span class="ic"><svg class="icon"><use href="#i-msg"/></svg></span><span>Viber<small>Poruka na 063 320 380</small></span></a></li>
-      <li><a href="https://wa.me/38163320380" target="_blank" rel="noopener"><span class="ic"><svg class="icon"><use href="#i-msg"/></svg></span><span>WhatsApp<small>Poruka na 063 320 380</small></span></a></li>
-      <li><a href="tel:+38163320380"><span class="ic"><svg class="icon"><use href="#i-phone"/></svg></span><span>Poziv<small>063 320 380</small></span></a></li>
-      <li><a href="mailto:studiointergeo@gmail.com"><span class="ic"><svg class="icon"><use href="#i-mail"/></svg></span><span>Mejl<small>studiointergeo@gmail.com</small></span></a></li>
-    </ul>
+    <div class="dc-body">
+      <span class="dc-time" id="dc-time"></span>
+      <div class="dc-msg">
+        <span class="dc-avatar dc-avatar--sm" aria-hidden="true">SM</span>
+        <div class="dc-bubble" id="dc-bubble">
+          <span class="dc-typing" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="dc-text">Dobar dan, ja sam Slaviša.<br><br>Ako vas zanima legalizacija, katastar ili nešto oko parcele, pišite mi. Odgovaram lično, na Viberu ili WhatsApp-u.</span>
+        </div>
+      </div>
+    </div>
+    <div class="dc-actions">
+      <a class="dc-btn dc-btn--wa" href="https://wa.me/38163320380?text=Dobar%20dan%2C%20pi%C5%A1em%20sa%20sajta%20INTERGEO." target="_blank" rel="noopener"><svg class="icon"><use href="#i-msg"/></svg>WhatsApp</a>
+      <a class="dc-btn dc-btn--viber" href="viber://chat?number=%2B38163320380"><svg class="icon"><use href="#i-phone"/></svg>Viber</a>
+    </div>
+    <a class="dc-call" href="tel:+38163320380">ili pozovite 063 320 380</a>
   </div>
-  <button class="dc-toggle" type="button" aria-expanded="false" aria-controls="dc-panel"><svg class="icon"><use href="#i-chat"/></svg><span class="label">Pišite nam</span></button>
+  <button class="dc-toggle" type="button" aria-expanded="false" aria-controls="dc-panel"><span class="dc-toggle-ic"><svg class="icon"><use href="#i-chat"/></svg></span><span class="label">Pitajte me</span><i class="dc-badge" aria-hidden="true"></i></button>
 </div>
 
 <script>
 (function(){
   var h=document.getElementById('header'),b=h.querySelector('.menu-btn');
   b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Zatvori meni':'Otvori meni');});
-  var d=document.getElementById('dc'),t=d.querySelector('.dc-toggle');
-  t.addEventListener('click',function(){var o=d.classList.toggle('open');t.setAttribute('aria-expanded',o);});
+  var d=document.getElementById('dc'),t=d.querySelector('.dc-toggle'),typed=false;
+  function seen(){try{return sessionStorage.getItem('dc-seen')==='1'}catch(e){return false}}
+  if(seen())d.classList.add('seen');
+  try{var hr=parseInt(new Intl.DateTimeFormat('en-GB',{hour:'2-digit',hourCycle:'h23',timeZone:'Europe/Belgrade'}).format(new Date()),10);
+    if(hr<7||hr>=21){d.classList.add('away');document.getElementById('dc-status').textContent='Sada nisam tu. Javljam se od 7h ujutru';}}catch(e){}
+  function setOpen(o){
+    d.classList.toggle('open',o);t.setAttribute('aria-expanded',o);
+    if(o){d.classList.add('seen');try{sessionStorage.setItem('dc-seen','1')}catch(e){}
+      var n=new Date();document.getElementById('dc-time').textContent=('0'+n.getHours()).slice(-2)+':'+('0'+n.getMinutes()).slice(-2);
+      if(!typed){typed=true;var bb=document.getElementById('dc-bubble');
+        if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){bb.classList.add('done');}
+        else{bb.classList.add('typing');setTimeout(function(){bb.classList.remove('typing');bb.classList.add('done');},900);}}}
+  }
+  t.addEventListener('click',function(){setOpen(!d.classList.contains('open'));});
+  d.querySelector('.dc-close').addEventListener('click',function(){setOpen(false);t.focus();});
+  function autoOpen(){setTimeout(function(){
+    if(seen()||d.classList.contains('open')||h.classList.contains('open'))return;
+    var ae=document.activeElement;if(ae&&/^(INPUT|TEXTAREA|SELECT)$/.test(ae.tagName))return;
+    setOpen(true);},4000);}
+  if(document.readyState==='complete')autoOpen();else window.addEventListener('load',autoOpen);
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){d.classList.remove('open');t.setAttribute('aria-expanded',false);h.classList.remove('open');b.setAttribute('aria-expanded',false);}});
   document.addEventListener('click',function(e){if(d.classList.contains('open')&&!d.contains(e.target)){d.classList.remove('open');t.setAttribute('aria-expanded',false);}});
 })();
