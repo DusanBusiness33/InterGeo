@@ -11,7 +11,8 @@
 <meta property="og:description" content="Obeležavamo granične tačke parcele na terenu betonskim belegama, šipkama ili kočićima, sa skicom omeđavanja. Pre ograde, gradnje ili sadnje. INTERGEO, 063 320 380.">
 <meta property="og:url" content="https://intergeo.rs/omedjavanje-parcele.html">
 <meta name="theme-color" content="#1F5AAA">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTIiIGZpbGw9IiMxRjVBQUEiLz48cGF0aCBkPSJNMCw1My43NiBINjQgVjUyIEExMiwxMiAwIDAgMSA1Miw2NCBIMTIgQTEyLDEyIDAgMCAxIDAsNTIgWiIgZmlsbD0iI0VBRTEzOSIvPjxwYXRoIGQ9Ik00NS4yOSwxOS43MCBBMTYuODYsMTYuODYgMCAxIDAgNDguODYsMzAuMDgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSI1Ljk1MiIgc3Ryb2tlLWxpbmVjYXA9ImJ1dHQiLz48cmVjdCB4PSIzMi4wMCIgeT0iMjcuMTAiIHdpZHRoPSIxOS44NCIgaGVpZ2h0PSI1Ljk1MiIgZmlsbD0iI0ZGRkZGRiIvPjxyZWN0IHg9IjMwLjg4IiB5PSIzLjg0IiB3aWR0aD0iMi4yNCIgaGVpZ2h0PSI0OS45MiIgZmlsbD0iI0ZGRkZGRiIvPjxyZWN0IHg9IjMuODQiIHk9IjI4Ljk1OTk5OTk5OTk5OTk5NyIgd2lkdGg9IjU2LjMyIiBoZWlnaHQ9IjIuMjQiIGZpbGw9IiNGRkZGRkYiLz48L3N2Zz4=">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -79,7 +80,7 @@ p{margin:0}
 .header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
 .header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:84px}
 .brand{display:block;flex:none;line-height:0}
-.brand svg{height:62px;width:auto;aspect-ratio:2.9737}
+.brand .logo-crop{--lh:62px}
 .nav{display:flex;align-items:center;gap:6px}
 .nav ul{display:flex;list-style:none;margin:0;padding:0;gap:2px}
 .nav a.link{display:block;padding:10px 13px;font-family:var(--head);font-weight:600;font-size:.98rem;color:var(--ink);border-radius:var(--radius)}
@@ -193,7 +194,7 @@ p{margin:0}
 .footer{background:var(--navy);color:#AFBDD3;font-size:.95rem;border-top:4px solid var(--yellow)}
 .footer .wrap{padding-top:72px;padding-bottom:28px}
 .foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.15fr;gap:48px}
-.foot-brand svg{height:60px;width:auto;aspect-ratio:2.9737}
+.foot-brand .logo-plate{margin-bottom:2px}
 .foot-brand p{margin-top:20px;max-width:34ch;line-height:1.6}
 .footer h4{font-family:var(--head);color:#fff;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin:6px 0 18px;font-weight:700}
 .footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
@@ -273,7 +274,7 @@ p{margin:0}
   .topbar .wrap{justify-content:center}
   .topbar .addr{display:none}
   .header .wrap{min-height:70px}
-  .brand svg{height:46px}
+  .brand .logo-crop{--lh:46px}
   .nav .btn{display:none}
   .call-mobile{display:inline-flex;width:46px;height:46px;border-radius:var(--radius);background:var(--blue);color:#fff;align-items:center;justify-content:center;margin-right:8px}
   .call-mobile .icon{width:20px;height:20px}
@@ -514,10 +515,47 @@ p{margin:0}
   .hero-rating .stars svg{width:13px;height:13px}
   .hero-pause{left:auto;right:auto;left:20px;bottom:18px;width:36px;height:36px}
 }
+
+/* nadogradnja v1: pravi logo, originalna slika sa Daibau profila; fajl se ne menja, prikazuje se samo deo bez belih ivica */
+.logo-crop{--lh:62px;display:block;position:relative;overflow:hidden;height:var(--lh);width:calc(var(--lh)*2.6798)}
+.logo-crop img{position:absolute;display:block;max-width:none;width:121.931%;height:auto;left:-10.147%;top:-32.456%}
+.logo-plate{display:inline-block;background:#fff;border-radius:8px;padding:10px 12px;line-height:0}
+.foot-brand .logo-crop{--lh:52px}
+/* Daibau ocene */
+.daibau{margin-top:28px;display:grid;grid-template-columns:minmax(160px,auto) 1fr 1fr;gap:28px;align-items:start;border:1px solid var(--line);border-radius:10px;padding:26px 28px;background:#fff}
+.daibau-score b{display:block;font-family:var(--head);font-size:2.1rem;font-weight:800;color:var(--ink);line-height:1}
+.daibau-score span{display:block;font-size:.92rem;color:var(--muted);margin-top:8px;line-height:1.45}
+.daibau-score a{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-family:var(--head);font-weight:600;font-size:.93rem}
+.daibau-score a .icon{width:15px;height:15px}
+.daibau figure,.quote-mini{margin:0}
+.daibau blockquote,.quote-mini blockquote{margin:0;color:var(--ink);font-size:1.0625rem;line-height:1.6}
+.daibau figcaption,.quote-mini figcaption{margin-top:10px;font-size:.9rem;color:var(--muted)}
+.daibau cite,.quote-mini cite{font-style:normal;font-weight:600;color:var(--ink)}
+.quote-mini{border-left:3px solid var(--yellow);padding:4px 0 4px 20px}
+.prose .quote-mini+.quote-mini{margin-top:22px}
+@media (max-width:860px){.daibau{grid-template-columns:1fr;gap:22px}}
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Service",
+ "name": "Omeđavanje parcela",
+ "serviceType": "Omeđavanje parcela",
+ "url": "https://intergeo.rs/omedjavanje-parcele.html",
+ "areaServed": {
+  "@type": "City",
+  "name": "Beograd"
+ },
+ "provider": {
+  "@type": "ProfessionalService",
+  "name": "INTERGEO - Studio za geodetske poslove",
+  "url": "https://intergeo.rs/",
+  "telephone": "+381 63 320 380"
+ }
+}
+</script>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="logo-intergeo" viewBox="0 0 1080 363.2"><path d="M6,0 H1046 A34,34 0 0 1 1080,34 V357.2 A6,6 0 0 1 1074,363.2 H34 A34,34 0 0 1 0,329.2 V6 A6,6 0 0 1 6,0 Z" fill="#EAE139"/><path d="M6,0 H1046 A34,34 0 0 1 1080,34 V277.0 H0 V6 A6,6 0 0 1 6,0 Z" fill="#1F5AAA"/><path d="M63.5 199.4V76.3H89.6V199.4ZM233.5 199.4H200.3L146.8 106.3H146Q146.3 112.1 146.6 118Q146.9 123.9 147.1 129.8Q147.4 135.6 147.6 141.5V199.4H124.3V76.3H157.2L210.7 168.5H211.3Q211.1 162.8 210.8 157.2Q210.6 151.5 210.4 145.9Q210.2 140.2 210 134.6V76.3H233.5ZM315.7 199.4H289.6V98.1H256.1V76.3H349.1V98.1H315.7ZM442.7 199.4H371.8V76.3H442.7V97.7H397.9V124.8H439.5V146.1H397.9V177.9H442.7ZM507.9 76.3Q524.7 76.3 535.6 80.4Q546.5 84.4 551.8 92.6Q557.1 100.8 557.1 113.2Q557.1 121.6 553.9 128Q550.7 134.3 545.5 138.6Q540.2 143 534.2 145.8L570.4 199.4H541.4L512 152.2H498.1V199.4H472V76.3ZM506.1 97.7H498.1V131H506.6Q519.5 131 525.1 126.6Q530.7 122.3 530.7 113.9Q530.7 105.1 524.7 101.4Q518.7 97.7 506.1 97.7Z" fill="#FFFFFF"/><path d="M880.9 199.4H810V76.3H880.9V97.7H836.1V124.8H877.7V146.1H836.1V177.9H880.9ZM1022 137.7Q1022 152 1018.4 163.6Q1014.9 175.3 1007.7 183.7Q1000.5 192.1 989.5 196.6Q978.4 201.1 963.4 201.1Q948.3 201.1 937.3 196.6Q926.2 192.1 919 183.7Q911.8 175.3 908.3 163.6Q904.8 151.9 904.8 137.6Q904.8 118.4 911 104.2Q917.3 90.1 930.4 82.2Q943.4 74.4 963.5 74.4Q983.6 74.4 996.5 82.2Q1009.4 90.1 1015.7 104.3Q1022 118.5 1022 137.7ZM932.1 137.7Q932.1 150.6 935.4 159.9Q938.6 169.2 945.5 174.2Q952.4 179.2 963.4 179.2Q974.5 179.2 981.4 174.2Q988.3 169.2 991.5 159.9Q994.6 150.6 994.6 137.7Q994.6 118.4 987.4 107.2Q980.1 96.1 963.5 96.1Q952.5 96.1 945.6 101.1Q938.6 106.1 935.4 115.4Q932.1 124.8 932.1 137.7Z" fill="#FFFFFF"/><path d="M749.61,85.40 A85.26,85.26 0 1 0 767.68,137.89" fill="none" stroke="#FFFFFF" stroke-width="26.46957760026838" stroke-linecap="butt"/><rect x="682.42" y="124.65" width="98.49" height="26.46957760026838" fill="#FFFFFF"/><rect x="679.96" y="22.16" width="4.92" height="254.85" fill="#FFFFFF"/><rect x="575.81" y="135.43" width="213.23" height="4.92" fill="#FFFFFF"/><rect x="48.00" y="236.38" width="563.51" height="10.46" fill="#FFFFFF"/><rect x="753.34" y="236.38" width="278.66" height="10.46" fill="#FFFFFF"/><path d="M80.9 328.5Q80.9 331.9 79.3 334.4Q77.6 336.9 74.5 338.2Q71.4 339.6 66.9 339.6Q65 339.6 63.1 339.3Q61.2 339.1 59.5 338.6Q57.7 338 56.2 337.3V329.8Q58.9 331 61.8 332Q64.7 332.9 67.5 332.9Q69.5 332.9 70.7 332.4Q71.9 331.9 72.5 331Q73 330.1 73 328.9Q73 327.5 72.1 326.5Q71.1 325.5 69.4 324.6Q67.8 323.7 65.7 322.7Q64.3 322.1 62.8 321.2Q61.2 320.3 59.8 319Q58.4 317.7 57.5 315.8Q56.6 314 56.6 311.4Q56.6 308 58.2 305.6Q59.7 303.2 62.6 301.9Q65.5 300.6 69.5 300.6Q72.4 300.6 75.1 301.3Q77.8 302 80.7 303.3L78.1 309.5Q75.5 308.5 73.4 307.9Q71.4 307.3 69.2 307.3Q67.7 307.3 66.6 307.8Q65.6 308.2 65 309.1Q64.5 310 64.5 311.1Q64.5 312.5 65.3 313.4Q66.1 314.3 67.7 315.2Q69.3 316 71.6 317.2Q74.6 318.5 76.6 320Q78.7 321.5 79.8 323.5Q80.9 325.5 80.9 328.5ZM107 339.1H98.9V307.8H88.6V301.1H117.3V307.8H107ZM158.5 301.1V325.7Q158.5 329.6 156.8 332.7Q155.1 335.9 151.6 337.7Q148.1 339.6 142.8 339.6Q135.3 339.6 131.3 335.7Q127.4 331.9 127.4 325.6V301.1H135.4V324.4Q135.4 329 137.3 330.9Q139.2 332.8 143 332.8Q145.6 332.8 147.3 331.9Q148.9 331 149.7 329.1Q150.5 327.2 150.5 324.3V301.1ZM203.8 319.7Q203.8 326.1 201.3 330.4Q198.9 334.7 194.3 336.9Q189.6 339.1 183.1 339.1H172.3V301.1H184.2Q190.2 301.1 194.6 303.3Q199 305.4 201.4 309.5Q203.8 313.6 203.8 319.7ZM195.4 319.9Q195.4 315.7 194.2 313Q193 310.3 190.6 309Q188.2 307.7 184.7 307.7H180.4V332.4H183.8Q189.7 332.4 192.6 329.3Q195.4 326.1 195.4 319.9ZM216.2 339.1V301.1H224.2V339.1ZM272.8 320Q272.8 324.4 271.7 328Q270.6 331.6 268.4 334.2Q266.1 336.8 262.8 338.2Q259.4 339.6 254.7 339.6Q250.1 339.6 246.7 338.2Q243.3 336.8 241.1 334.2Q238.8 331.6 237.7 328Q236.7 324.4 236.7 320Q236.7 314.1 238.6 309.7Q240.5 305.4 244.5 303Q248.6 300.5 254.8 300.5Q260.9 300.5 264.9 303Q268.9 305.4 270.8 309.7Q272.8 314.1 272.8 320ZM245.1 320Q245.1 324 246.1 326.9Q247.1 329.7 249.2 331.3Q251.3 332.8 254.7 332.8Q258.1 332.8 260.3 331.3Q262.4 329.7 263.4 326.9Q264.3 324 264.3 320Q264.3 314.1 262.1 310.7Q259.9 307.2 254.8 307.2Q251.4 307.2 249.2 308.8Q247.1 310.3 246.1 313.2Q245.1 316.1 245.1 320ZM328.2 339.1H300V333.8L318.2 307.8H300.5V301.1H327.7V306.3L309.6 332.4H328.2ZM362 339.1 359.3 330H345.5L342.7 339.1H334.1L347.4 301H357.3L370.7 339.1ZM357.4 323.3 354.6 314.5Q354.4 313.6 353.9 312.2Q353.5 310.8 353.1 309.4Q352.7 307.9 352.4 306.9Q352.1 307.9 351.7 309.5Q351.2 311.1 350.8 312.5Q350.4 313.9 350.2 314.5L347.5 323.3ZM412.8 317.8H427.8V337.4Q424.8 338.4 421.6 339Q418.4 339.6 414.3 339.6Q408.7 339.6 404.7 337.3Q400.8 335.1 398.7 330.8Q396.7 326.4 396.7 320Q396.7 314.1 399 309.7Q401.3 305.4 405.7 303Q410.1 300.6 416.5 300.6Q419.5 300.6 422.4 301.2Q425.4 301.9 427.8 302.9L425.1 309.4Q423.4 308.5 421.1 307.9Q418.9 307.3 416.5 307.3Q413 307.3 410.4 308.9Q407.8 310.5 406.4 313.4Q405 316.3 405 320.2Q405 323.9 406 326.8Q407 329.6 409.2 331.3Q411.3 332.9 414.8 332.9Q416.6 332.9 417.7 332.7Q418.9 332.5 420 332.4V324.5H412.8ZM463.2 339.1H441.4V301.1H463.2V307.7H449.4V316.1H462.3V322.6H449.4V332.4H463.2ZM510.1 320Q510.1 324.4 509 328Q507.9 331.6 505.7 334.2Q503.5 336.8 500.1 338.2Q496.7 339.6 492.1 339.6Q487.4 339.6 484 338.2Q480.6 336.8 478.4 334.2Q476.2 331.6 475.1 328Q474 324.4 474 320Q474 314.1 475.9 309.7Q477.9 305.4 481.9 303Q485.9 300.5 492.1 300.5Q498.3 300.5 502.3 303Q506.2 305.4 508.2 309.7Q510.1 314.1 510.1 320ZM482.4 320Q482.4 324 483.4 326.9Q484.4 329.7 486.6 331.3Q488.7 332.8 492.1 332.8Q495.5 332.8 497.6 331.3Q499.7 329.7 500.7 326.9Q501.7 324 501.7 320Q501.7 314.1 499.4 310.7Q497.2 307.2 492.1 307.2Q488.7 307.2 486.6 308.8Q484.4 310.3 483.4 313.2Q482.4 316.1 482.4 320ZM554 319.7Q554 326.1 551.5 330.4Q549.1 334.7 544.4 336.9Q539.8 339.1 533.3 339.1H522.5V301.1H534.4Q540.4 301.1 544.8 303.3Q549.2 305.4 551.6 309.5Q554 313.6 554 319.7ZM545.6 319.9Q545.6 315.7 544.4 313Q543.2 310.3 540.8 309Q538.4 307.7 534.8 307.7H530.6V332.4H534Q539.9 332.4 542.8 329.3Q545.6 326.1 545.6 319.9ZM588.2 339.1H566.4V301.1H588.2V307.7H574.4V316.1H587.3V322.6H574.4V332.4H588.2ZM615.3 339.1H607.3V307.8H597V301.1H625.6V307.8H615.3ZM658.4 328.5Q658.4 331.9 656.7 334.4Q655.1 336.9 652 338.2Q648.9 339.6 644.4 339.6Q642.4 339.6 640.6 339.3Q638.7 339.1 636.9 338.6Q635.2 338 633.7 337.3V329.8Q636.4 331 639.3 332Q642.2 332.9 645 332.9Q647 332.9 648.2 332.4Q649.4 331.9 650 331Q650.5 330.1 650.5 328.9Q650.5 327.5 649.5 326.5Q648.6 325.5 646.9 324.6Q645.2 323.7 643.1 322.7Q641.8 322.1 640.3 321.2Q638.7 320.3 637.3 319Q635.9 317.7 635 315.8Q634.1 314 634.1 311.4Q634.1 308 635.7 305.6Q637.2 303.2 640.1 301.9Q643 300.6 646.9 300.6Q649.9 300.6 652.6 301.3Q655.3 302 658.2 303.3L655.6 309.5Q653 308.5 650.9 307.9Q648.8 307.3 646.7 307.3Q645.2 307.3 644.1 307.8Q643.1 308.2 642.5 309.1Q642 310 642 311.1Q642 312.5 642.8 313.4Q643.5 314.3 645.1 315.2Q646.7 316 649.1 317.2Q652 318.5 654.1 320Q656.2 321.5 657.3 323.5Q658.4 325.5 658.4 328.5ZM700.3 339.1H691.2L681.2 323.1L677.8 325.5V339.1H669.8V301.1H677.8V318.5Q678.7 317.4 679.4 316.3Q680.2 315.1 681 314L691.3 301.1H700.2L687 317.9ZM731.5 339.1H709.6V301.1H731.5V307.7H717.7V316.1H730.5V322.6H717.7V332.4H731.5ZM774.4 301.1Q781.7 301.1 785.1 304.3Q788.5 307.4 788.5 313Q788.5 315.5 787.7 317.7Q787 320 785.3 321.8Q783.6 323.5 780.7 324.5Q777.9 325.6 773.8 325.6H770.3V339.1H762.3V301.1ZM774 307.7H770.3V319H773Q775.2 319 776.9 318.4Q778.5 317.8 779.4 316.5Q780.4 315.2 780.4 313.2Q780.4 310.4 778.8 309.1Q777.2 307.7 774 307.7ZM834.6 320Q834.6 324.4 833.5 328Q832.4 331.6 830.2 334.2Q828 336.8 824.6 338.2Q821.2 339.6 816.5 339.6Q811.9 339.6 808.5 338.2Q805.1 336.8 802.9 334.2Q800.7 331.6 799.6 328Q798.5 324.4 798.5 320Q798.5 314.1 800.4 309.7Q802.4 305.4 806.4 303Q810.4 300.5 816.6 300.5Q822.8 300.5 826.8 303Q830.7 305.4 832.7 309.7Q834.6 314.1 834.6 320ZM806.9 320Q806.9 324 807.9 326.9Q808.9 329.7 811.1 331.3Q813.2 332.8 816.5 332.8Q820 332.8 822.1 331.3Q824.2 329.7 825.2 326.9Q826.2 324 826.2 320Q826.2 314.1 823.9 310.7Q821.7 307.2 816.6 307.2Q813.2 307.2 811.1 308.8Q808.9 310.3 807.9 313.2Q806.9 316.1 806.9 320ZM869.4 328.5Q869.4 331.9 867.8 334.4Q866.1 336.9 863 338.2Q859.9 339.6 855.4 339.6Q853.4 339.6 851.6 339.3Q849.7 339.1 848 338.6Q846.2 338 844.7 337.3V329.8Q847.4 331 850.3 332Q853.2 332.9 856 332.9Q858 332.9 859.2 332.4Q860.4 331.9 861 331Q861.5 330.1 861.5 328.9Q861.5 327.5 860.5 326.5Q859.6 325.5 857.9 324.6Q856.2 323.7 854.1 322.7Q852.8 322.1 851.3 321.2Q849.7 320.3 848.3 319Q846.9 317.7 846 315.8Q845.1 314 845.1 311.4Q845.1 308 846.7 305.6Q848.2 303.2 851.1 301.9Q854 300.6 858 300.6Q860.9 300.6 863.6 301.3Q866.3 302 869.2 303.3L866.6 309.5Q864 308.5 861.9 307.9Q859.8 307.3 857.7 307.3Q856.2 307.3 855.1 307.8Q854.1 308.2 853.5 309.1Q853 310 853 311.1Q853 312.5 853.8 313.4Q854.6 314.3 856.2 315.2Q857.7 316 860.1 317.2Q863 318.5 865.1 320Q867.2 321.5 868.3 323.5Q869.4 325.5 869.4 328.5ZM880.8 339.1V301.1H888.9V332.4H904.2V339.1ZM949.8 320Q949.8 324.4 948.7 328Q947.6 331.6 945.4 334.2Q943.2 336.8 939.8 338.2Q936.4 339.6 931.7 339.6Q927.1 339.6 923.7 338.2Q920.3 336.8 918.1 334.2Q915.9 331.6 914.8 328Q913.7 324.4 913.7 320Q913.7 314.1 915.6 309.7Q917.6 305.4 921.6 303Q925.6 300.5 931.8 300.5Q938 300.5 941.9 303Q945.9 305.4 947.9 309.7Q949.8 314.1 949.8 320ZM922.1 320Q922.1 324 923.1 326.9Q924.1 329.7 926.2 331.3Q928.4 332.8 931.7 332.8Q935.2 332.8 937.3 331.3Q939.4 329.7 940.4 326.9Q941.4 324 941.4 320Q941.4 314.1 939.1 310.7Q936.9 307.2 931.8 307.2Q928.4 307.2 926.3 308.8Q924.1 310.3 923.1 313.2Q922.1 316.1 922.1 320ZM992 301.1 979.1 339.1H970.3L957.4 301.1H965.5L972.7 323.7Q972.9 324.3 973.3 325.8Q973.7 327.4 974.1 329.2Q974.5 330.9 974.7 332.1Q974.9 330.9 975.3 329.2Q975.7 327.4 976.1 325.9Q976.5 324.3 976.6 323.7L983.8 301.1ZM1023.1 339.1H1001.3V301.1H1023.1V307.7H1009.3V316.1H1022.2V322.6H1009.3V332.4H1023.1Z" fill="#1F5AAA"/></symbol></svg>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
@@ -562,7 +600,7 @@ p{margin:0}
 <header class="header" id="header">
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="INTERGEO, studio za geodetske poslove - početna">
-      <svg role="img" aria-label="INTERGEO - Studio za geodetske poslove"><use href="#logo-intergeo"/></svg>
+      <span class="logo-crop"><img src="intergeo-logo.jpeg" width="745" height="396" alt="INTERGEO, studio za geodetske poslove"></span>
     </a>
     <nav class="nav" aria-label="Glavni meni">
       <ul id="meni"><li><a class="link" href="usluge.html" aria-current="page">Usluge</a></li><li><a class="link" href="cena-usluge.html">Cena usluge</a></li><li><a class="link" href="o-nama.html">O nama</a></li><li><a class="link" href="korisne-informacije.html">Korisne informacije</a></li><li><a class="link" href="kontakt.html">Kontakt</a></li></ul>
@@ -629,13 +667,20 @@ p{margin:0}
       <h2>Čime obeležavamo</h2>
       <p>Granične tačke obeležavamo betonskim belegama propisanih dimenzija. Ako vam više odgovara, koristimo gvozdene šipke ili drvene kočiće obojene crveno ili nekom drugom upadljivom bojom, da se lako vide.</p>
 
+      <h2>Kad se komšije ne slažu oko granice</h2>
+      <p>Granice na terenu poredimo sa koordinatama međnih tačaka iz katastra. Pronalazimo i obeležavamo međne tačke i o tome pravimo zapisnik. Stranke se pozivaju da prisustvuju omeđavanju i potpišu zapisnik, pa obe strane na licu mesta vide gde je granica po katastru.</p>
+
       <h2>Od čega zavisi cena</h2>
       <p>Od površine parcele i njene namene: šuma, livada, njiva, bašta, voćnjak i slično. Tačnu cenu kažemo kad nam pošaljete broj parcele i opštinu.</p>
 
       <div class="callout">
         <strong>Ne znate ni gde je parcela?</strong>
-        <p>Ako imate samo broj parcele, a ne znate gde je na terenu, ne treba vam omeđavanje. Dovoljna je <a href="usluge.html#identifikacija">identifikacija parcele</a> na terenu, katastarskom planu i aviosnimku.</p>
+        <p>Ako imate samo broj parcele, a ne znate gde je na terenu, ne treba vam omeđavanje. Dovoljna je identifikacija parcele na terenu, katastarskom planu i aviosnimku.</p>
       </div>
+
+      <h2>Ocene sa Daibau-a</h2>
+      <figure class="quote-mini"><blockquote>„Brzo, dobro odrađen posao.“</blockquote><figcaption><cite>Aleksandra S.</cite>, omeđavanje, ocena na <a href="https://www.daibau.rs/izvodjac/studio_za_geodetske_poslove_intergeo" target="_blank" rel="noopener">Daibau-u</a></figcaption></figure>
+      <figure class="quote-mini"><blockquote>„Momci bili tačni, brzi, precizni. Sve po dogovoru.“</blockquote><figcaption><cite>Zlatko M.</cite>, obeležavanje parcele, ocena na <a href="https://www.daibau.rs/izvodjac/studio_za_geodetske_poslove_intergeo" target="_blank" rel="noopener">Daibau-u</a></figcaption></figure>
     </div>
     <aside class="aside" aria-label="Kontakt i usluge">
   <div class="card card-contact">
@@ -650,7 +695,7 @@ p{margin:0}
   </div>
   <div class="card card-links">
     <h3>Glavne usluge</h3>
-    <ul><li><a href="legalizacija.html">Legalizacija <svg class="icon"><use href="#i-arrow"/></svg></a></li><li><a href="ucrtavanje-u-katastar.html">Ucrtavanje objekta u katastar <svg class="icon"><use href="#i-arrow"/></svg></a></li><li><a href="omedjavanje-parcele.html" aria-current="page">Omeđavanje parcele <svg class="icon"><use href="#i-arrow"/></svg></a></li><li><a href="parcelisanje.html">Parcelisanje <svg class="icon"><use href="#i-arrow"/></svg></a></li><li><a href="situacioni-plan.html">Situacioni plan <svg class="icon"><use href="#i-arrow"/></svg></a></li><li><a href="formiranje-gradjevinske-parcele.html">Formiranje građevinske parcele <svg class="icon"><use href="#i-arrow"/></svg></a></li></ul>
+    <ul><li><a href="upis-stana-u-katastar.html">Nalaz veštaka i upis stana <svg class="icon"><use href="#i-arrow"/></svg></a></li><li><a href="legalizacija.html">Legalizacija <svg class="icon"><use href="#i-arrow"/></svg></a></li><li><a href="ucrtavanje-u-katastar.html">Ucrtavanje objekata u katastar <svg class="icon"><use href="#i-arrow"/></svg></a></li><li><a href="omedjavanje-parcele.html" aria-current="page">Omeđavanje parcela <svg class="icon"><use href="#i-arrow"/></svg></a></li><li><a href="deoba-parcele.html">Deoba parcela <svg class="icon"><use href="#i-arrow"/></svg></a></li><li><a href="geodetski-snimak.html">Geodetski snimak <svg class="icon"><use href="#i-arrow"/></svg></a></li></ul>
     <ul><li><a href="usluge.html">Sve usluge <svg class="icon"><use href="#i-arrow"/></svg></a></li></ul>
   </div>
 </aside>
@@ -676,12 +721,12 @@ p{margin:0}
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <svg role="img" aria-label="INTERGEO - Studio za geodetske poslove"><use href="#logo-intergeo"/></svg>
-        <p>Studio za geodetske poslove. Legalizacija, katastar, omeđavanje i parcelisanje u Beogradu.</p>
+        <span class="logo-plate"><span class="logo-crop"><img src="intergeo-logo.jpeg" width="745" height="396" alt="INTERGEO, studio za geodetske poslove" loading="lazy"></span></span>
+        <p>Studio za geodetske poslove sa licencom RGZ. Legalizacija, upis u katastar, omeđavanje i deoba parcela u Beogradu.</p>
       </div>
       <div>
         <h4>Usluge</h4>
-        <ul><li><a href="legalizacija.html">Legalizacija</a></li><li><a href="ucrtavanje-u-katastar.html">Ucrtavanje objekta u katastar</a></li><li><a href="omedjavanje-parcele.html">Omeđavanje parcele</a></li><li><a href="parcelisanje.html">Parcelisanje</a></li><li><a href="situacioni-plan.html">Situacioni plan</a></li><li><a href="formiranje-gradjevinske-parcele.html">Formiranje građevinske parcele</a></li></ul>
+        <ul><li><a href="upis-stana-u-katastar.html">Nalaz veštaka i upis stana</a></li><li><a href="legalizacija.html">Legalizacija</a></li><li><a href="ucrtavanje-u-katastar.html">Ucrtavanje objekata u katastar</a></li><li><a href="omedjavanje-parcele.html">Omeđavanje parcela</a></li><li><a href="deoba-parcele.html">Deoba parcela</a></li><li><a href="geodetski-snimak.html">Geodetski snimak</a></li><li><a href="katastarsko-topografski-plan.html">Katastarsko-topografski plan</a></li></ul>
       </div>
       <div>
         <h4>Studio</h4>
