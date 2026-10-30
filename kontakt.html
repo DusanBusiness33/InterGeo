@@ -556,6 +556,15 @@ p{margin:0}
 .logo-crop img{position:absolute;display:block;max-width:none;width:121.931%;height:auto;left:-10.147%;top:-32.456%}
 .logo-plate{display:inline-block;background:#fff;border-radius:8px;padding:10px 12px;line-height:0}
 .foot-brand .logo-crop{--lh:52px}
+/* Google recenzije uživo (google-recenzije.js) */
+.g-reviews[hidden]{display:none}
+.g-autor{display:flex;align-items:center;gap:12px}
+.g-autor img{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:none;background:var(--tint)}
+.g-autor cite{display:block;font-style:normal;font-weight:600;color:var(--ink)}
+.g-autor cite a{color:inherit}
+.g-autor span{display:block;font-size:.88rem;color:var(--muted);margin-top:2px}
+.stars svg.off{opacity:.28}
+.review footer a{font-weight:600}
 /* Daibau ocene */
 .daibau{margin-top:28px;display:grid;grid-template-columns:minmax(160px,auto) 1fr 1fr;gap:28px;align-items:start;border:1px solid var(--line);border-radius:10px;padding:26px 28px;background:#fff}
 .daibau-score b{display:block;font-family:var(--head);font-size:2.1rem;font-weight:800;color:var(--ink);line-height:1}
@@ -636,7 +645,7 @@ p{margin:0}
     <p class="lead">Najbrže ćete nas dobiti telefonom, svakog dana od 7 do 21&nbsp;h. Dolazak u kancelariju zakažite unapred telefonom.</p>
     <div class="hero-actions">
       <a class="btn btn--big" href="tel:+38163320380"><svg class="icon"><use href="#i-phone"/></svg><span class="num">Pozovite 063 320 380</span></a>
-      <p class="hero-note">Prva konsultacija je besplatna.</p>
+      <p class="hero-note">Konsultacija je besplatna.</p>
     </div>
   </div>
 </section>
@@ -645,10 +654,10 @@ p{margin:0}
   <div class="wrap contact-grid">
     <div>
       <span class="kicker">Direktno</span>
-      <h2>Telefon, poruka ili mejl</h2>
+      <h2>Telefon, poruka ili e-mail</h2>
       <ul class="contact-lines">
         <li><svg class="icon"><use href="#i-phone"/></svg><div><small>Telefon</small><a href="tel:+38163320380">063 320 380</a></div></li>
-        <li><svg class="icon"><use href="#i-mail"/></svg><div><small>Mejl</small><a href="mailto:studiointergeo@gmail.com">studiointergeo@gmail.com</a></div></li>
+        <li><svg class="icon"><use href="#i-mail"/></svg><div><small>E-mail</small><a href="mailto:studiointergeo@gmail.com">studiointergeo@gmail.com</a></div></li>
         <li><svg class="icon"><use href="#i-clock"/></svg><div><small>Radno vreme</small><strong>Svakog dana 7–21&nbsp;h</strong></div></li>
       </ul>
       <div class="chat-row">
@@ -677,7 +686,7 @@ p{margin:0}
   <div class="wrap page-grid">
     <div class="form-box">
       <h2>Pošaljite upit</h2>
-      <p>Upišite podatke koje imate, a ostalo ćemo proveriti u razgovoru. Upit šaljete iz svoje WhatsApp ili mejl aplikacije, a odgovor stiže na isto mesto.</p>
+      <p>Upišite podatke koje imate, a ostalo ćemo proveriti u razgovoru. Upit šaljete iz svoje WhatsApp ili e-mail aplikacije, a odgovor stiže na isto mesto.</p>
       <form class="form" id="upit-forma" novalidate>
         <div class="row">
           <div><label for="f-ime">Ime i prezime</label><input id="f-ime" name="ime" type="text" autocomplete="name" required></div>
@@ -711,7 +720,7 @@ p{margin:0}
         <p class="hint" id="f-greska" role="alert" style="color:#B42318;display:none">Upišite ime i broj telefona kako bismo mogli da vas pozovemo.</p>
         <div class="acts">
           <button class="btn" type="submit" data-kanal="wa"><svg class="icon"><use href="#i-msg"/></svg>Pošalji na WhatsApp</button>
-          <button class="btn btn--ghost" type="submit" data-kanal="mail"><svg class="icon"><use href="#i-mail"/></svg>Pošalji mejlom</button>
+          <button class="btn btn--ghost" type="submit" data-kanal="mail"><svg class="icon"><use href="#i-mail"/></svg>Pošalji e-mailom</button>
         </div>
       </form>
     </div>

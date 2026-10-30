@@ -558,6 +558,15 @@ p{margin:0}
 .logo-crop img{position:absolute;display:block;max-width:none;width:121.931%;height:auto;left:-10.147%;top:-32.456%}
 .logo-plate{display:inline-block;background:#fff;border-radius:8px;padding:10px 12px;line-height:0}
 .foot-brand .logo-crop{--lh:52px}
+/* Google recenzije uživo (google-recenzije.js) */
+.g-reviews[hidden]{display:none}
+.g-autor{display:flex;align-items:center;gap:12px}
+.g-autor img{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:none;background:var(--tint)}
+.g-autor cite{display:block;font-style:normal;font-weight:600;color:var(--ink)}
+.g-autor cite a{color:inherit}
+.g-autor span{display:block;font-size:.88rem;color:var(--muted);margin-top:2px}
+.stars svg.off{opacity:.28}
+.review footer a{font-weight:600}
 /* Daibau ocene */
 .daibau{margin-top:28px;display:grid;grid-template-columns:minmax(160px,auto) 1fr 1fr;gap:28px;align-items:start;border:1px solid var(--line);border-radius:10px;padding:26px 28px;background:#fff}
 .daibau-score b{display:block;font-family:var(--head);font-size:2.1rem;font-weight:800;color:var(--ink);line-height:1}
@@ -645,12 +654,10 @@ p{margin:0}
         <p class="lead">Legalizacija, upis stana i objekta u katastar, omeđavanje i deoba parcela. Izlazimo na teren, pravimo elaborat i predajemo ga katastru.</p>
         <div class="hero-actions">
           <a class="btn btn--big" href="tel:+38163320380"><svg class="icon"><use href="#i-phone"/></svg><span class="num">Pozovite 063 320 380</span></a>
-          <p class="hero-note">Prva konsultacija je besplatna. Pozivi i poruke na <a href="viber://chat?number=%2B38163320380">Viberu</a>: svakog dana 7–21&nbsp;h.</p>
+          <p class="hero-note">Konsultacije su besplatne. Pozivi i poruke na <a href="viber://chat?number=%2B38163320380">Viberu</a>: svakog dana 7–21&nbsp;h.</p>
         </div>
-        <a class="hero-rating" href="https://www.google.com/maps/place/?q=place_id:ChIJj9ctrYd7WkcRUtGckUCigCw" target="_blank" rel="noopener" aria-label="Ocena 4,9 od 5 iz 168 recenzija na Google-u">
-          <b>4,9</b>
-          <span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
-          <span>168 recenzija na Google-u</span>
+        <a class="hero-rating" data-g-badge href="https://www.google.com/maps/place/?q=place_id:ChIJj9ctrYd7WkcRUtGckUCigCw" target="_blank" rel="noopener">
+          <span>Recenzije klijenata na Google mapama</span>
         </a>
       </div>
     </div>
@@ -662,7 +669,7 @@ p{margin:0}
       <ul>
         <li><svg class="icon"><use href="#i-shield"/></svg><div><strong>Licenca RGZ</strong><span>Rešenje Republičkog geodetskog zavoda br. 952-03-110/2016.</span></div></li>
         <li><svg class="icon"><use href="#i-building"/></svg><div><strong>Dve kancelarije</strong><span>Ruzveltova 4 na Zvezdari i Gročanska 6 na Vračaru.</span></div></li>
-        <li><svg class="icon"><use href="#i-talk"/></svg><div><strong>Besplatna konsultacija</strong><span>Telefonom, mejlom ili u kancelariji, pre nego što bilo šta platite.</span></div></li>
+        <li><svg class="icon"><use href="#i-talk"/></svg><div><strong>Besplatna konsultacija</strong><span>Telefonom, e-mailom ili u kancelariji, pre nego što bilo šta platite.</span></div></li>
         <li><svg class="icon"><use href="#i-clock"/></svg><div><strong>Radno vreme</strong><span>Svakog dana od 7 do 21&nbsp;h. Termin izlaska na teren dogovaramo telefonom.</span></div></li>
       </ul>
     </div>
@@ -737,31 +744,15 @@ p{margin:0}
     <div class="wrap">
       <div class="section-head">
         <span class="kicker">Recenzije</span>
-        <h2>168 recenzija na Google-u, prosečna ocena 4,9</h2>
+        <h2 data-g-naslov>Recenzije klijenata na Google mapama</h2>
         <p class="lead">U recenzijama klijenti najčešće ističu da je posao završen u dogovorenom roku.</p>
       </div>
-      <div class="reviews">
-        <figure class="review" style="margin:0">
-          <span class="stars" aria-label="5 od 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
-          <blockquote>„Ekstra profesionalno, svaki dogovor i rokovi ispoštovani, vrlo pristupačno i prijateljski pristup klijentu. Iskrena preporuka.“</blockquote>
-          <footer><cite>Čedomir T.</cite><span>Google recenzija</span></footer>
-        </figure>
-        <figure class="review" style="margin:0">
-          <span class="stars" aria-label="5 od 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
-          <blockquote>„Izuzetan profesionalizam. Dogovoreni posao se završava u najkraćem mogućem roku. Ova recenzija je napisana na osnovu dugogodišnje saradnje sa vlasnikom Studija Slavišom.“</blockquote>
-          <footer><cite>Mijo K.</cite><span>Google recenzija</span></footer>
-        </figure>
-        <figure class="review" style="margin:0">
-          <span class="stars" aria-label="5 od 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
-          <blockquote>„Dobra saradnja, precizno i profesionalno.“</blockquote>
-          <footer><cite>Petar T.</cite><span>Google recenzija</span></footer>
-        </figure>
-      </div>
+      <div class="reviews g-reviews" id="g-recenzije" hidden></div>
       <div class="reviews-foot">
-        <a class="btn btn--ghost" href="https://www.google.com/maps/place/?q=place_id:ChIJj9ctrYd7WkcRUtGckUCigCw" target="_blank" rel="noopener">Svih 168 recenzija na Google-u <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--ghost" data-g-sve href="https://www.google.com/maps/place/?q=place_id:ChIJj9ctrYd7WkcRUtGckUCigCw" target="_blank" rel="noopener">Sve recenzije na Google mapama <svg class="icon"><use href="#i-arrow"/></svg></a>
       </div>
       <div class="daibau">
-        <div class="daibau-score"><b>9,8</b><span>od 10, ocena firme na Daibau-u</span><a href="https://www.daibau.rs/izvodjac/studio_za_geodetske_poslove_intergeo" target="_blank" rel="noopener">Profil na Daibau-u <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+        <div class="daibau-score"><b>Daibau</b><span>Ocene klijenata na portalu Daibau</span><a href="https://www.daibau.rs/izvodjac/studio_za_geodetske_poslove_intergeo" target="_blank" rel="noopener">Profil na Daibau-u <svg class="icon"><use href="#i-arrow"/></svg></a></div>
         <figure><blockquote>„Brzo, dobro odrađen posao.“</blockquote><figcaption><cite>Aleksandra S.</cite>, omeđavanje</figcaption></figure>
         <figure><blockquote>„Momci bili tačni, brzi, precizni. Sve po dogovoru.“</blockquote><figcaption><cite>Zlatko M.</cite>, obeležavanje parcele</figcaption></figure>
       </div>
@@ -818,7 +809,7 @@ p{margin:0}
         <h2>Kontakt i kancelarije</h2>
         <ul class="contact-lines">
           <li><svg class="icon"><use href="#i-phone"/></svg><div><small>Telefon</small><a href="tel:+38163320380">063 320 380</a></div></li>
-          <li><svg class="icon"><use href="#i-mail"/></svg><div><small>Mejl</small><a href="mailto:studiointergeo@gmail.com">studiointergeo@gmail.com</a></div></li>
+          <li><svg class="icon"><use href="#i-mail"/></svg><div><small>E-mail</small><a href="mailto:studiointergeo@gmail.com">studiointergeo@gmail.com</a></div></li>
           <li><svg class="icon"><use href="#i-clock"/></svg><div><small>Radno vreme</small><strong>Svakog dana 7–21&nbsp;h</strong></div></li>
         </ul>
         <div class="chat-row">
@@ -961,5 +952,6 @@ p{margin:0}
   document.addEventListener('click',function(e){if(d.classList.contains('open')&&!d.contains(e.target)){d.classList.remove('open');t.setAttribute('aria-expanded',false);}});
 })();
 </script>
+<script src="google-recenzije.js" defer></script>
 </body>
 </html>

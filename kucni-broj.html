@@ -523,6 +523,15 @@ p{margin:0}
 .logo-crop img{position:absolute;display:block;max-width:none;width:121.931%;height:auto;left:-10.147%;top:-32.456%}
 .logo-plate{display:inline-block;background:#fff;border-radius:8px;padding:10px 12px;line-height:0}
 .foot-brand .logo-crop{--lh:52px}
+/* Google recenzije uživo (google-recenzije.js) */
+.g-reviews[hidden]{display:none}
+.g-autor{display:flex;align-items:center;gap:12px}
+.g-autor img{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:none;background:var(--tint)}
+.g-autor cite{display:block;font-style:normal;font-weight:600;color:var(--ink)}
+.g-autor cite a{color:inherit}
+.g-autor span{display:block;font-size:.88rem;color:var(--muted);margin-top:2px}
+.stars svg.off{opacity:.28}
+.review footer a{font-weight:600}
 /* Daibau ocene */
 .daibau{margin-top:28px;display:grid;grid-template-columns:minmax(160px,auto) 1fr 1fr;gap:28px;align-items:start;border:1px solid var(--line);border-radius:10px;padding:26px 28px;background:#fff}
 .daibau-score b{display:block;font-family:var(--head);font-size:2.1rem;font-weight:800;color:var(--ink);line-height:1}
@@ -673,7 +682,7 @@ p{margin:0}
     <aside class="aside" aria-label="Kontakt i usluge">
   <div class="card card-contact">
     <h2>Niste sigurni šta vam treba?</h2>
-    <p>Opišite situaciju telefonom. Prva konsultacija je besplatna.</p>
+    <p>Opišite situaciju telefonom. Konsultacija je besplatna.</p>
     <a class="btn" href="tel:+38163320380"><svg class="icon"><use href="#i-phone"/></svg>063 320 380</a>
     <a class="btn btn--ghost" href="viber://chat?number=%2B38163320380"><svg class="icon"><use href="#i-msg"/></svg>Pišite na Viber</a>
     <div class="meta">
