@@ -480,10 +480,12 @@ p{margin:0}
 .guide>h2+p{margin-top:12px}
 .guide>h3{margin-top:30px}
 
-/* ===== home hero with video ===== */
-.hero--video{padding:0;min-height:min(780px,calc(100vh - 126px));display:flex;align-items:center;background:var(--navy) url("intergeo-hero.jpg") center/cover no-repeat;color:#fff;isolation:isolate}
+/* ===== početni hero: statične fotografije sa mekim pretapanjem ===== */
+.hero--video{padding:0;min-height:min(780px,calc(100vh - 126px));display:flex;align-items:center;background:var(--navy);color:#fff;isolation:isolate}
 .hero--video .wrap{display:block;width:100%;padding-top:96px;padding-bottom:104px}
-.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero-slides{position:absolute;inset:0;z-index:-2;overflow:hidden;background:var(--navy)}
+.hero-slide{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:var(--dx,50%) center;opacity:0;transition:opacity 1.8s cubic-bezier(.45,0,.55,1)}
+.hero-slide.is-active{opacity:1}
 .hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(12,30,59,.94) 0%,rgba(12,30,59,.86) 38%,rgba(12,30,59,.45) 72%,rgba(12,30,59,.25) 100%),linear-gradient(0deg,rgba(12,30,59,.55) 0%,rgba(12,30,59,0) 40%)}
 .hero-copy{max-width:640px}
 .hero--video .kicker{color:var(--yellow)}
@@ -505,9 +507,9 @@ p{margin:0}
 .hero-pause.paused .i-play{display:block}
 @media (min-width:1400px){.hero-pause{left:calc((100vw - 1100px)/2 - 64px)}}
 @media (max-width:768px){
-  .hero--video{min-height:auto;background-position:62% center}
+  .hero--video{min-height:auto}
   .hero--video .wrap{padding-top:64px;padding-bottom:88px}
-  .hero-video{object-position:62% center}
+  .hero-slide{object-position:var(--mx,50%) center}
   .hero-shade{background:linear-gradient(180deg,rgba(12,30,59,.66) 0%,rgba(12,30,59,.78) 45%,rgba(12,30,59,.9) 100%)}
   .hero-rating{margin-top:26px;gap:8px;padding:9px 12px;font-size:.84rem}
   .hero-rating b{font-size:1.2rem}
@@ -592,14 +594,14 @@ p{margin:0}
     <ul>
       <li><svg class="icon"><use href="#i-phone"/></svg><a href="tel:+38163320380">063 320 380</a></li>
       <li class="hide-m"><svg class="icon"><use href="#i-mail"/></svg><a href="mailto:studiointergeo@gmail.com">studiointergeo@gmail.com</a></li>
-      <li><svg class="icon"><use href="#i-clock"/></svg>Svaki dan 07-21h</li>
+      <li><svg class="icon"><use href="#i-clock"/></svg>Svakog dana 7–21&nbsp;h</li>
     </ul>
   </div>
 </div>
 
 <header class="header" id="header">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="INTERGEO, studio za geodetske poslove - početna">
+    <a class="brand" href="index.html" aria-label="INTERGEO, studio za geodetske poslove – početna">
       <span class="logo-crop"><img src="intergeo-logo.jpeg" width="745" height="396" alt="INTERGEO, studio za geodetske poslove"></span>
     </a>
     <nav class="nav" aria-label="Glavni meni">
@@ -635,12 +637,12 @@ p{margin:0}
       <p>Ako opština primeti da snimak odstupa od građevinske dozvole, odmah obaveštava građevinskog inspektora.</p>
 
       <h2>Zašto se isplati na vreme</h2>
-      <p>Pri šalovanju i betoniranju temelj može da se pomeri nekoliko centimetara, nekad i više. Snimak pokaže odstupanje dok je ispravka još jeftina, pre zidova i ploča.</p>
+      <p>Pri šalovanju i betoniranju temelj može da se pomeri nekoliko centimetara, nekad i više. Snimak otkriva odstupanje na vreme, pre zidova i ploča, dok je ispravka još jednostavna.</p>
 
       <h2>Šta snimamo</h2>
       <p>Merimo položaj, oblik i visine izvedenih temelja i poredimo ih sa projektom na osnovu kog je izdata građevinska dozvola. Na snimku se vidi i udaljenost temelja od granica parcele.</p>
 
-      <h2>Kako ide</h2>
+      <h2>Kako teče postupak</h2>
       <ol class="steps">
         <li><span class="n">01</span><div><h3>Javite nam</h3><p>Čim su temelji izliveni, pozovite. Izlazak dogovaramo pre nastavka radova.</p></div></li>
         <li><span class="n">02</span><div><h3>Merenje</h3><p>Snimamo temelje na gradilištu.</p></div></li>
@@ -672,7 +674,7 @@ p{margin:0}
     <a class="btn" href="tel:+38163320380"><svg class="icon"><use href="#i-phone"/></svg>063 320 380</a>
     <a class="btn btn--ghost" href="viber://chat?number=%2B38163320380"><svg class="icon"><use href="#i-msg"/></svg>Pišite na Viber</a>
     <div class="meta">
-      <span><svg class="icon"><use href="#i-clock"/></svg>Svaki dan 07-21h</span>
+      <span><svg class="icon"><use href="#i-clock"/></svg>Svakog dana 7–21&nbsp;h</span>
       <span><svg class="icon"><use href="#i-pin"/></svg>Ruzveltova 4 i Gročanska 6</span>
     </div>
   </div>
@@ -688,8 +690,8 @@ p{margin:0}
 <section class="cta-band">
   <div class="wrap">
     <div>
-      <h2>Recite nam šta imate, mi kažemo šta vam treba</h2>
-      <p>Pozovite ili pišite. Za par minuta znate koje snimanje vam je potrebno i kolika je cena.</p>
+      <h2>Opišite nam slučaj, a mi ćemo vam reći šta je potrebno</h2>
+      <p>Pozovite nas ili pošaljite poruku. U kratkom razgovoru saznaćete koje snimanje vam je potrebno i kolika je cena.</p>
     </div>
     <div class="acts">
       <a class="btn btn--big" href="tel:+38163320380"><svg class="icon"><use href="#i-phone"/></svg><span class="num">Pozovite 063 320 380</span></a>
@@ -728,7 +730,7 @@ p{margin:0}
           <li><a href="mailto:studiointergeo@gmail.com">studiointergeo@gmail.com</a></li>
           <li>Ruzveltova 4, Zvezdara</li>
           <li>Gročanska 6, Vračar</li>
-          <li>Svaki dan 07-21h</li>
+          <li>Svakog dana 7–21&nbsp;h</li>
         </ul>
       </div>
     </div>
@@ -744,7 +746,7 @@ p{margin:0}
       <span class="dc-avatar" aria-hidden="true">SM<i class="dc-dot"></i></span>
       <span class="dc-who">
         <strong id="dc-name">Slaviša Matić</strong>
-        <span class="dc-status" id="dc-status">Odgovaram lično, svaki dan od 7 do 21h</span>
+        <span class="dc-status" id="dc-status">Odgovaram lično, svaki dan od 7 do 21&nbsp;h</span>
       </span>
       <button class="dc-close" type="button" aria-label="Zatvori"><svg class="icon"><use href="#i-x"/></svg></button>
     </div>
@@ -754,7 +756,7 @@ p{margin:0}
         <span class="dc-avatar dc-avatar--sm" aria-hidden="true">SM</span>
         <div class="dc-bubble" id="dc-bubble">
           <span class="dc-typing" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span class="dc-text">Dobar dan, ja sam Slaviša.<br><br>Ako vas zanima legalizacija, katastar ili nešto oko parcele, pišite mi. Odgovaram lično, na Viberu ili WhatsApp-u.</span>
+          <span class="dc-text">Dobar dan, ja sam Slaviša Matić.<br><br>Za pitanja o legalizaciji, upisu u katastar ili parceli pišite mi na Viber ili WhatsApp. Odgovaram lično.</span>
         </div>
       </div>
     </div>
@@ -775,7 +777,7 @@ p{margin:0}
   function seen(){try{return sessionStorage.getItem('dc-seen')==='1'}catch(e){return false}}
   if(seen())d.classList.add('seen');
   try{var hr=parseInt(new Intl.DateTimeFormat('en-GB',{hour:'2-digit',hourCycle:'h23',timeZone:'Europe/Belgrade'}).format(new Date()),10);
-    if(hr<7||hr>=21){d.classList.add('away');document.getElementById('dc-status').textContent='Sada nisam tu. Javljam se od 7h ujutru';}}catch(e){}
+    if(hr<7||hr>=21){d.classList.add('away');document.getElementById('dc-status').textContent='Trenutno nisam dostupan. Odgovaram od 7\u00a0h';}}catch(e){}
   function setOpen(o){
     d.classList.toggle('open',o);t.setAttribute('aria-expanded',o);
     if(o){d.classList.add('seen');try{sessionStorage.setItem('dc-seen','1')}catch(e){}

@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kontakt - INTERGEO geodetski studio, Zvezdara i Vračar | 063 320 380</title>
-<meta name="description" content="Pozovite 063 320 380 ili pišite na Viber, WhatsApp ili studiointergeo@gmail.com. Kancelarije: Ruzveltova 4 (Zvezdara) i Gročanska 6 (Vračar). Svaki dan 07-21h.">
+<title>Kontakt – INTERGEO geodetski studio, Zvezdara i Vračar | 063 320 380</title>
+<meta name="description" content="Pozovite 063 320 380 ili pišite na Viber, WhatsApp ili studiointergeo@gmail.com. Kancelarije: Ruzveltova 4 (Zvezdara) i Gročanska 6 (Vračar). Svakog dana od 7 do 21 h.">
 <link rel="canonical" href="https://intergeo.rs/kontakt.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Kontakt - INTERGEO geodetski studio, Zvezdara i Vračar | 063 320 380">
-<meta property="og:description" content="Pozovite 063 320 380 ili pišite na Viber, WhatsApp ili studiointergeo@gmail.com. Kancelarije: Ruzveltova 4 (Zvezdara) i Gročanska 6 (Vračar). Svaki dan 07-21h.">
+<meta property="og:title" content="Kontakt – INTERGEO geodetski studio, Zvezdara i Vračar | 063 320 380">
+<meta property="og:description" content="Pozovite 063 320 380 ili pišite na Viber, WhatsApp ili studiointergeo@gmail.com. Kancelarije: Ruzveltova 4 (Zvezdara) i Gročanska 6 (Vračar). Svakog dana od 7 do 21 h.">
 <meta property="og:url" content="https://intergeo.rs/kontakt.html">
 <meta name="theme-color" content="#1F5AAA">
 <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
@@ -513,10 +513,12 @@ p{margin:0}
 .guide>h2+p{margin-top:12px}
 .guide>h3{margin-top:30px}
 
-/* ===== home hero with video ===== */
-.hero--video{padding:0;min-height:min(780px,calc(100vh - 126px));display:flex;align-items:center;background:var(--navy) url("intergeo-hero.jpg") center/cover no-repeat;color:#fff;isolation:isolate}
+/* ===== početni hero: statične fotografije sa mekim pretapanjem ===== */
+.hero--video{padding:0;min-height:min(780px,calc(100vh - 126px));display:flex;align-items:center;background:var(--navy);color:#fff;isolation:isolate}
 .hero--video .wrap{display:block;width:100%;padding-top:96px;padding-bottom:104px}
-.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero-slides{position:absolute;inset:0;z-index:-2;overflow:hidden;background:var(--navy)}
+.hero-slide{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:var(--dx,50%) center;opacity:0;transition:opacity 1.8s cubic-bezier(.45,0,.55,1)}
+.hero-slide.is-active{opacity:1}
 .hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(12,30,59,.94) 0%,rgba(12,30,59,.86) 38%,rgba(12,30,59,.45) 72%,rgba(12,30,59,.25) 100%),linear-gradient(0deg,rgba(12,30,59,.55) 0%,rgba(12,30,59,0) 40%)}
 .hero-copy{max-width:640px}
 .hero--video .kicker{color:var(--yellow)}
@@ -538,9 +540,9 @@ p{margin:0}
 .hero-pause.paused .i-play{display:block}
 @media (min-width:1400px){.hero-pause{left:calc((100vw - 1100px)/2 - 64px)}}
 @media (max-width:768px){
-  .hero--video{min-height:auto;background-position:62% center}
+  .hero--video{min-height:auto}
   .hero--video .wrap{padding-top:64px;padding-bottom:88px}
-  .hero-video{object-position:62% center}
+  .hero-slide{object-position:var(--mx,50%) center}
   .hero-shade{background:linear-gradient(180deg,rgba(12,30,59,.66) 0%,rgba(12,30,59,.78) 45%,rgba(12,30,59,.9) 100%)}
   .hero-rating{margin-top:26px;gap:8px;padding:9px 12px;font-size:.84rem}
   .hero-rating b{font-size:1.2rem}
@@ -606,14 +608,14 @@ p{margin:0}
     <ul>
       <li><svg class="icon"><use href="#i-phone"/></svg><a href="tel:+38163320380">063 320 380</a></li>
       <li class="hide-m"><svg class="icon"><use href="#i-mail"/></svg><a href="mailto:studiointergeo@gmail.com">studiointergeo@gmail.com</a></li>
-      <li><svg class="icon"><use href="#i-clock"/></svg>Svaki dan 07-21h</li>
+      <li><svg class="icon"><use href="#i-clock"/></svg>Svakog dana 7–21&nbsp;h</li>
     </ul>
   </div>
 </div>
 
 <header class="header" id="header">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="INTERGEO, studio za geodetske poslove - početna">
+    <a class="brand" href="index.html" aria-label="INTERGEO, studio za geodetske poslove – početna">
       <span class="logo-crop"><img src="intergeo-logo.jpeg" width="745" height="396" alt="INTERGEO, studio za geodetske poslove"></span>
     </a>
     <nav class="nav" aria-label="Glavni meni">
@@ -630,8 +632,8 @@ p{margin:0}
   <div class="wrap">
     <ol class="crumbs"><li><a href="index.html">Početna</a></li><li aria-current="page">Kontakt</li></ol>
     <span class="kicker">Kontakt</span>
-    <h1>Pozovite, pišite ili svratite</h1>
-    <p class="lead">Najbrže je telefonom. Javljamo se svaki dan od 7 do 21h. Pre dolaska u kancelariju nas pozovite, da se dogovorimo za termin.</p>
+    <h1>Kontakt i kancelarije u Beogradu</h1>
+    <p class="lead">Najbrže ćete nas dobiti telefonom, svakog dana od 7 do 21&nbsp;h. Dolazak u kancelariju zakažite unapred telefonom.</p>
     <div class="hero-actions">
       <a class="btn btn--big" href="tel:+38163320380"><svg class="icon"><use href="#i-phone"/></svg><span class="num">Pozovite 063 320 380</span></a>
       <p class="hero-note">Prva konsultacija je besplatna.</p>
@@ -647,7 +649,7 @@ p{margin:0}
       <ul class="contact-lines">
         <li><svg class="icon"><use href="#i-phone"/></svg><div><small>Telefon</small><a href="tel:+38163320380">063 320 380</a></div></li>
         <li><svg class="icon"><use href="#i-mail"/></svg><div><small>Mejl</small><a href="mailto:studiointergeo@gmail.com">studiointergeo@gmail.com</a></div></li>
-        <li><svg class="icon"><use href="#i-clock"/></svg><div><small>Radno vreme</small><strong>Svaki dan 07-21h</strong></div></li>
+        <li><svg class="icon"><use href="#i-clock"/></svg><div><small>Radno vreme</small><strong>Svakog dana 7–21&nbsp;h</strong></div></li>
       </ul>
       <div class="chat-row">
         <a class="btn" href="viber://chat?number=%2B38163320380"><svg class="icon"><use href="#i-msg"/></svg>Pišite na Viber</a>
@@ -675,14 +677,14 @@ p{margin:0}
   <div class="wrap page-grid">
     <div class="form-box">
       <h2>Pošaljite upit</h2>
-      <p>Popunite šta znate, ostalo pitamo mi. Upit šaljete iz svoje WhatsApp ili mejl aplikacije, a odgovor stiže na isto mesto.</p>
+      <p>Upišite podatke koje imate, a ostalo ćemo proveriti u razgovoru. Upit šaljete iz svoje WhatsApp ili mejl aplikacije, a odgovor stiže na isto mesto.</p>
       <form class="form" id="upit-forma" novalidate>
         <div class="row">
           <div><label for="f-ime">Ime i prezime</label><input id="f-ime" name="ime" type="text" autocomplete="name" required></div>
           <div><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required></div>
         </div>
         <div>
-          <label for="f-usluga">Šta vam treba</label>
+          <label for="f-usluga">Usluga</label>
           <select id="f-usluga" name="usluga">
             <option>Ne znam tačno, treba mi savet</option>
             <option>Nalaz i mišljenje veštaka građevinske struke</option>
@@ -706,7 +708,7 @@ p{margin:0}
           <div><label for="f-kp">Broj parcele</label><input id="f-kp" name="parcela" type="text"><p class="hint">Ako ga znate. Piše u listu nepokretnosti.</p></div>
         </div>
         <div><label for="f-poruka">Poruka</label><textarea id="f-poruka" name="poruka" placeholder="Na primer: prodajem deo placa i treba da ga podelim na dve parcele."></textarea></div>
-        <p class="hint" id="f-greska" role="alert" style="color:#B42318;display:none">Upišite ime i telefon, da znamo koga da zovemo.</p>
+        <p class="hint" id="f-greska" role="alert" style="color:#B42318;display:none">Upišite ime i broj telefona kako bismo mogli da vas pozovemo.</p>
         <div class="acts">
           <button class="btn" type="submit" data-kanal="wa"><svg class="icon"><use href="#i-msg"/></svg>Pošalji na WhatsApp</button>
           <button class="btn btn--ghost" type="submit" data-kanal="mail"><svg class="icon"><use href="#i-mail"/></svg>Pošalji mejlom</button>
@@ -716,9 +718,9 @@ p{margin:0}
     <aside class="aside" aria-label="Šta se dešava posle upita">
       <div class="card card-contact">
         <h2>Šta se dešava posle</h2>
-        <p>Javljamo se čim vidimo poruku, telefonom ili porukom. Kažemo vam šta je potrebno za vaš slučaj i kolika je cena, pre nego što bilo šta krene.</p>
+        <p>Na upit odgovaramo telefonom ili porukom, u okviru radnog vremena. Pre početka posla kažemo vam šta je potrebno za vaš slučaj i kolika je cena.</p>
         <div class="meta">
-          <span><svg class="icon"><use href="#i-clock"/></svg>Svaki dan 07-21h</span>
+          <span><svg class="icon"><use href="#i-clock"/></svg>Svakog dana 7–21&nbsp;h</span>
           <span><svg class="icon"><use href="#i-phone"/></svg>063 320 380</span>
         </div>
       </div>
@@ -773,7 +775,7 @@ p{margin:0}
           <li><a href="mailto:studiointergeo@gmail.com">studiointergeo@gmail.com</a></li>
           <li>Ruzveltova 4, Zvezdara</li>
           <li>Gročanska 6, Vračar</li>
-          <li>Svaki dan 07-21h</li>
+          <li>Svakog dana 7–21&nbsp;h</li>
         </ul>
       </div>
     </div>
@@ -789,7 +791,7 @@ p{margin:0}
       <span class="dc-avatar" aria-hidden="true">SM<i class="dc-dot"></i></span>
       <span class="dc-who">
         <strong id="dc-name">Slaviša Matić</strong>
-        <span class="dc-status" id="dc-status">Odgovaram lično, svaki dan od 7 do 21h</span>
+        <span class="dc-status" id="dc-status">Odgovaram lično, svaki dan od 7 do 21&nbsp;h</span>
       </span>
       <button class="dc-close" type="button" aria-label="Zatvori"><svg class="icon"><use href="#i-x"/></svg></button>
     </div>
@@ -799,7 +801,7 @@ p{margin:0}
         <span class="dc-avatar dc-avatar--sm" aria-hidden="true">SM</span>
         <div class="dc-bubble" id="dc-bubble">
           <span class="dc-typing" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span class="dc-text">Dobar dan, ja sam Slaviša.<br><br>Ako vas zanima legalizacija, katastar ili nešto oko parcele, pišite mi. Odgovaram lično, na Viberu ili WhatsApp-u.</span>
+          <span class="dc-text">Dobar dan, ja sam Slaviša Matić.<br><br>Za pitanja o legalizaciji, upisu u katastar ili parceli pišite mi na Viber ili WhatsApp. Odgovaram lično.</span>
         </div>
       </div>
     </div>
@@ -820,7 +822,7 @@ p{margin:0}
   function seen(){try{return sessionStorage.getItem('dc-seen')==='1'}catch(e){return false}}
   if(seen())d.classList.add('seen');
   try{var hr=parseInt(new Intl.DateTimeFormat('en-GB',{hour:'2-digit',hourCycle:'h23',timeZone:'Europe/Belgrade'}).format(new Date()),10);
-    if(hr<7||hr>=21){d.classList.add('away');document.getElementById('dc-status').textContent='Sada nisam tu. Javljam se od 7h ujutru';}}catch(e){}
+    if(hr<7||hr>=21){d.classList.add('away');document.getElementById('dc-status').textContent='Trenutno nisam dostupan. Odgovaram od 7\u00a0h';}}catch(e){}
   function setOpen(o){
     d.classList.toggle('open',o);t.setAttribute('aria-expanded',o);
     if(o){d.classList.add('seen');try{sessionStorage.setItem('dc-seen','1')}catch(e){}

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>INTERGEO - geometar Beograd | Legalizacija, katastar, omeđavanje</title>
+<title>INTERGEO – geometar Beograd | Legalizacija, katastar, omeđavanje</title>
 <meta name="description" content="Studio za geodetske poslove INTERGEO: legalizacija, ucrtavanje objekta u katastar, omeđavanje i parcelisanje. Kancelarije na Zvezdari i Vračaru. Pozovite 063 320 380.">
 <link rel="canonical" href="https://intergeo.rs/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="INTERGEO - studio za geodetske poslove, Beograd">
+<meta property="og:title" content="INTERGEO – studio za geodetske poslove, Beograd">
 <meta property="og:description" content="Studio za geodetske poslove INTERGEO: legalizacija, ucrtavanje objekta u katastar, omeđavanje i parcelisanje. Kancelarije na Zvezdari i Vračaru. Pozovite 063 320 380.">
 <meta property="og:url" content="https://intergeo.rs/">
 <meta name="theme-color" content="#1F5AAA">
@@ -515,10 +515,12 @@ p{margin:0}
 .guide>h2+p{margin-top:12px}
 .guide>h3{margin-top:30px}
 
-/* ===== home hero with video ===== */
-.hero--video{padding:0;min-height:min(780px,calc(100vh - 126px));display:flex;align-items:center;background:var(--navy) url("intergeo-hero.jpg") center/cover no-repeat;color:#fff;isolation:isolate}
+/* ===== početni hero: statične fotografije sa mekim pretapanjem ===== */
+.hero--video{padding:0;min-height:min(780px,calc(100vh - 126px));display:flex;align-items:center;background:var(--navy);color:#fff;isolation:isolate}
 .hero--video .wrap{display:block;width:100%;padding-top:96px;padding-bottom:104px}
-.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero-slides{position:absolute;inset:0;z-index:-2;overflow:hidden;background:var(--navy)}
+.hero-slide{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:var(--dx,50%) center;opacity:0;transition:opacity 1.8s cubic-bezier(.45,0,.55,1)}
+.hero-slide.is-active{opacity:1}
 .hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(12,30,59,.94) 0%,rgba(12,30,59,.86) 38%,rgba(12,30,59,.45) 72%,rgba(12,30,59,.25) 100%),linear-gradient(0deg,rgba(12,30,59,.55) 0%,rgba(12,30,59,0) 40%)}
 .hero-copy{max-width:640px}
 .hero--video .kicker{color:var(--yellow)}
@@ -540,9 +542,9 @@ p{margin:0}
 .hero-pause.paused .i-play{display:block}
 @media (min-width:1400px){.hero-pause{left:calc((100vw - 1100px)/2 - 64px)}}
 @media (max-width:768px){
-  .hero--video{min-height:auto;background-position:62% center}
+  .hero--video{min-height:auto}
   .hero--video .wrap{padding-top:64px;padding-bottom:88px}
-  .hero-video{object-position:62% center}
+  .hero-slide{object-position:var(--mx,50%) center}
   .hero-shade{background:linear-gradient(180deg,rgba(12,30,59,.66) 0%,rgba(12,30,59,.78) 45%,rgba(12,30,59,.9) 100%)}
   .hero-rating{margin-top:26px;gap:8px;padding:9px 12px;font-size:.84rem}
   .hero-rating b{font-size:1.2rem}
@@ -608,14 +610,14 @@ p{margin:0}
     <ul>
       <li><svg class="icon"><use href="#i-phone"/></svg><a href="tel:+38163320380">063 320 380</a></li>
       <li class="hide-m"><svg class="icon"><use href="#i-mail"/></svg><a href="mailto:studiointergeo@gmail.com">studiointergeo@gmail.com</a></li>
-      <li><svg class="icon"><use href="#i-clock"/></svg>Svaki dan 07-21h</li>
+      <li><svg class="icon"><use href="#i-clock"/></svg>Svakog dana 7–21&nbsp;h</li>
     </ul>
   </div>
 </div>
 
 <header class="header" id="header">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="INTERGEO, studio za geodetske poslove - početna">
+    <a class="brand" href="index.html" aria-label="INTERGEO, studio za geodetske poslove – početna">
       <span class="logo-crop"><img src="intergeo-logo.jpeg" width="745" height="396" alt="INTERGEO, studio za geodetske poslove"></span>
     </a>
     <nav class="nav" aria-label="Glavni meni">
@@ -630,18 +632,20 @@ p{margin:0}
 <main id="sadrzaj">
 
   <section class="hero hero--video" id="hero">
-    <video class="hero-video" id="hero-video" autoplay muted loop playsinline preload="metadata" poster="intergeo-hero.jpg" aria-hidden="true" tabindex="-1">
-      <source src="intergeo-hero.mp4" type="video/mp4">
-    </video>
+    <div class="hero-slides" id="hero-slides" aria-hidden="true">
+      <img class="hero-slide is-active" src="intergeo-hero-geometar.jpg" width="1600" height="678" alt="" fetchpriority="high" decoding="async" style="--dx:50%;--mx:57%">
+      <img class="hero-slide" data-src="intergeo-hero-kuca.jpg" width="1600" height="543" alt="" decoding="async" style="--dx:0%;--mx:36%">
+      <img class="hero-slide" data-src="intergeo-hero-stanica.jpg" width="1600" height="680" alt="" decoding="async" style="--dx:50%;--mx:38%">
+    </div>
     <div class="hero-shade" aria-hidden="true"></div>
     <div class="wrap">
       <div class="hero-copy">
         <span class="kicker">Geodetski studio · Beograd</span>
-        <h1>Geometar u Beogradu koji drži dogovoreni rok</h1>
+        <h1>Geometar u Beogradu koji poštuje dogovoreni&nbsp;rok</h1>
         <p class="lead">Legalizacija, upis stana i objekta u katastar, omeđavanje i deoba parcela. Izlazimo na teren, pravimo elaborat i predajemo ga katastru.</p>
         <div class="hero-actions">
           <a class="btn btn--big" href="tel:+38163320380"><svg class="icon"><use href="#i-phone"/></svg><span class="num">Pozovite 063 320 380</span></a>
-          <p class="hero-note">Prva konsultacija je besplatna. Svaki dan od 7 do 21h, a može i preko <a href="viber://chat?number=%2B38163320380">Vibera</a>.</p>
+          <p class="hero-note">Prva konsultacija je besplatna. Pozivi i poruke na <a href="viber://chat?number=%2B38163320380">Viberu</a>: svakog dana 7–21&nbsp;h.</p>
         </div>
         <a class="hero-rating" href="https://www.google.com/maps/place/?q=place_id:ChIJj9ctrYd7WkcRUtGckUCigCw" target="_blank" rel="noopener" aria-label="Ocena 4,9 od 5 iz 168 recenzija na Google-u">
           <b>4,9</b>
@@ -650,7 +654,7 @@ p{margin:0}
         </a>
       </div>
     </div>
-    <button class="hero-pause" id="hero-pause" type="button" aria-label="Zaustavi video" aria-pressed="false"><svg class="icon i-pause" viewBox="0 0 24 24"><path d="M9 6v12M15 6v12"/></svg><svg class="icon i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></button>
+    <button class="hero-pause" id="hero-pause" type="button" aria-label="Zaustavi smenu fotografija" aria-pressed="false"><svg class="icon i-pause" viewBox="0 0 24 24"><path d="M9 6v12M15 6v12"/></svg><svg class="icon i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></button>
   </section>
 
   <section class="trust" aria-label="Zašto INTERGEO">
@@ -659,7 +663,7 @@ p{margin:0}
         <li><svg class="icon"><use href="#i-shield"/></svg><div><strong>Licenca RGZ</strong><span>Rešenje Republičkog geodetskog zavoda br. 952-03-110/2016.</span></div></li>
         <li><svg class="icon"><use href="#i-building"/></svg><div><strong>Dve kancelarije</strong><span>Ruzveltova 4 na Zvezdari i Gročanska 6 na Vračaru.</span></div></li>
         <li><svg class="icon"><use href="#i-talk"/></svg><div><strong>Besplatna konsultacija</strong><span>Telefonom, mejlom ili u kancelariji, pre nego što bilo šta platite.</span></div></li>
-        <li><svg class="icon"><use href="#i-clock"/></svg><div><strong>Svaki dan 07-21h</strong><span>Javljamo se i vikendom, kad vam je zgodno da pričate.</span></div></li>
+        <li><svg class="icon"><use href="#i-clock"/></svg><div><strong>Radno vreme</strong><span>Svakog dana od 7 do 21&nbsp;h. Termin izlaska na teren dogovaramo telefonom.</span></div></li>
       </ul>
     </div>
   </section>
@@ -668,45 +672,45 @@ p{margin:0}
     <div class="wrap">
       <div class="section-head">
         <span class="kicker">Usluge</span>
-        <h2>Najčešće nas zovu zbog ovoga</h2>
-        <p class="lead">Ako ne znate šta tačno vam treba, opišite nam situaciju telefonom. Reći ćemo vam koje snimanje je potrebno, a koje nije.</p>
+        <h2>Najtraženije usluge</h2>
+        <p class="lead">Ako niste sigurni šta vam je potrebno, opišite nam situaciju telefonom. Reći ćemo vam koje snimanje je potrebno, a koje nije.</p>
       </div>
       <div class="services">
         <a class="service" href="upis-stana-u-katastar.html">
           <span class="ico"><svg class="icon"><use href="#i-doc"/></svg></span>
           <h3>Nalaz i mišljenje veštaka građevinske struke</h3>
           <p>Za upis stana u katastar kad u dozvoli zgrade nema podataka o stanu, kad dozvola nije sačuvana ili je zgrada starija od propisa o gradnji.</p>
-          <span class="more">Šta vam treba i kako ide <svg class="icon"><use href="#i-arrow"/></svg></span>
+          <span class="more">Opis usluge i postupak <svg class="icon"><use href="#i-arrow"/></svg></span>
         </a>
         <a class="service" href="legalizacija.html">
           <span class="ico"><svg class="icon"><use href="#s-legal"/></svg></span>
           <h3>Legalizacija</h3>
           <p>Geodetski snimak objekta i elaborat za upis u katastar, i po zakonu „Svoj na svome“.</p>
-          <span class="more">Šta vam treba i kako ide <svg class="icon"><use href="#i-arrow"/></svg></span>
+          <span class="more">Opis usluge i postupak <svg class="icon"><use href="#i-arrow"/></svg></span>
         </a>
         <a class="service" href="ucrtavanje-u-katastar.html">
           <span class="ico"><svg class="icon"><use href="#s-katastar"/></svg></span>
           <h3>Ucrtavanje objekata u katastar</h3>
           <p>Objekat zvanično postoji tek kad se ucrta u katastarske planove. Snimamo, pravimo elaborat i predajemo ga katastru.</p>
-          <span class="more">Šta vam treba i kako ide <svg class="icon"><use href="#i-arrow"/></svg></span>
+          <span class="more">Opis usluge i postupak <svg class="icon"><use href="#i-arrow"/></svg></span>
         </a>
         <a class="service" href="omedjavanje-parcele.html">
           <span class="ico"><svg class="icon"><use href="#s-omedj"/></svg></span>
           <h3>Omeđavanje parcela</h3>
           <p>Obeležavamo granične tačke parcele na terenu, pre ograde, gradnje ili sadnje.</p>
-          <span class="more">Šta vam treba i kako ide <svg class="icon"><use href="#i-arrow"/></svg></span>
+          <span class="more">Opis usluge i postupak <svg class="icon"><use href="#i-arrow"/></svg></span>
         </a>
         <a class="service" href="deoba-parcele.html">
           <span class="ico"><svg class="icon"><use href="#s-parcel"/></svg></span>
           <h3>Deoba parcela</h3>
-          <p>Delimo parcelu na manje, za prodaju dela placa ili kad suvlasnici hoće svako svoju parcelu.</p>
-          <span class="more">Šta vam treba i kako ide <svg class="icon"><use href="#i-arrow"/></svg></span>
+          <p>Delimo parcelu na manje, za prodaju dela placa ili kad suvlasnici žele da svako dobije svoju parcelu.</p>
+          <span class="more">Opis usluge i postupak <svg class="icon"><use href="#i-arrow"/></svg></span>
         </a>
         <a class="service" href="geodetski-snimak.html">
           <span class="ico"><svg class="icon"><use href="#s-situ"/></svg></span>
           <h3>Geodetski snimak</h3>
           <p>Merimo stvarno stanje na terenu: objekte, granice, ograde, priključke i visine. Osnova za projekat, legalizaciju i upis.</p>
-          <span class="more">Šta vam treba i kako ide <svg class="icon"><use href="#i-arrow"/></svg></span>
+          <span class="more">Opis usluge i postupak <svg class="icon"><use href="#i-arrow"/></svg></span>
         </a>
       </div>
     </div>
@@ -716,8 +720,8 @@ p{margin:0}
     <div class="wrap steps-grid">
       <div class="steps-intro">
         <span class="kicker">Kako radimo</span>
-        <h2>Prvo razgovor, pa tek onda merenje</h2>
-        <p>Ljudi nas često zovu sa spiskom snimanja koja im je neko rekao da naruče, a pola im ne treba. Zato prvo zajedno vidimo šta je zaista potrebno za vaš slučaj, i tek onda izlazimo na teren.</p>
+        <h2>Najpre konsultacija, zatim merenje</h2>
+        <p>Klijenti nam se često jave sa spiskom snimanja koja su im drugi preporučili, a deo njih za njihov slučaj nije potreban. Zato najpre zajedno utvrdimo šta je zaista potrebno, pa tek onda izlazimo na teren.</p>
         <a class="btn" href="tel:+38163320380"><svg class="icon"><use href="#i-phone"/></svg>Opišite nam situaciju</a>
       </div>
       <ol class="steps">
@@ -734,7 +738,7 @@ p{margin:0}
       <div class="section-head">
         <span class="kicker">Recenzije</span>
         <h2>168 recenzija na Google-u, prosečna ocena 4,9</h2>
-        <p class="lead">Klijenti najčešće pišu o istoj stvari: posao je gotov u roku koji je dogovoren.</p>
+        <p class="lead">U recenzijama klijenti najčešće ističu da je posao završen u dogovorenom roku.</p>
       </div>
       <div class="reviews">
         <figure class="review" style="margin:0">
@@ -768,8 +772,8 @@ p{margin:0}
     <div class="wrap">
       <div class="section-head">
         <span class="kicker">Reference</span>
-        <h2>Radili smo i za javna preduzeća i institute</h2>
-        <p class="lead">Bilo da je u pitanju javno preduzeće ili vlasnik jedne kuće, radimo isto: jasan dogovor, tačno merenje i elaborat koji katastar prihvati.</p>
+        <h2>Sarađivali smo sa javnim preduzećima i institutima</h2>
+        <p class="lead">Za javna preduzeća i za vlasnike porodičnih kuća radimo po istim pravilima: jasan dogovor, precizno merenje i elaborat koji katastar prihvata.</p>
       </div>
       <ul class="refs">
         <li>Direkcija za građevinsko zemljište i izgradnju Beograda</li>
@@ -781,7 +785,7 @@ p{margin:0}
         <li>Institut „Kirilo Savić“</li>
         <li>Institut „Jaroslav Černi“</li>
         <li>Skijališta Srbije</li>
-        <li>Telefonija a.d.</li>
+        <li>Telefonija a. d.</li>
         <li>Opština Zemun</li>
         <li>PlanetWin365</li>
       </ul>
@@ -792,7 +796,7 @@ p{margin:0}
     <div class="wrap">
       <div class="section-head">
         <span class="kicker">Sve usluge</span>
-        <h2>Šta još radimo</h2>
+        <h2>Ostale usluge</h2>
       </div>
       <ul class="all">
         <li><a href="kucni-broj.html">Dobijanje kućnog broja <svg class="icon"><use href="#i-arrow"/></svg></a></li>
@@ -811,11 +815,11 @@ p{margin:0}
     <div class="wrap contact-grid">
       <div>
         <span class="kicker">Kontakt</span>
-        <h2>Pozovite ili svratite u kancelariju</h2>
+        <h2>Kontakt i kancelarije</h2>
         <ul class="contact-lines">
           <li><svg class="icon"><use href="#i-phone"/></svg><div><small>Telefon</small><a href="tel:+38163320380">063 320 380</a></div></li>
           <li><svg class="icon"><use href="#i-mail"/></svg><div><small>Mejl</small><a href="mailto:studiointergeo@gmail.com">studiointergeo@gmail.com</a></div></li>
-          <li><svg class="icon"><use href="#i-clock"/></svg><div><small>Radno vreme</small><strong>Svaki dan 07-21h</strong></div></li>
+          <li><svg class="icon"><use href="#i-clock"/></svg><div><small>Radno vreme</small><strong>Svakog dana 7–21&nbsp;h</strong></div></li>
         </ul>
         <div class="chat-row">
           <a class="btn" href="viber://chat?number=%2B38163320380"><svg class="icon"><use href="#i-msg"/></svg>Pišite na Viber</a>
@@ -835,20 +839,28 @@ p{margin:0}
           <p>Vračar, Beograd</p>
           <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Gro%C4%8Danska%206%2C%20Beograd" target="_blank" rel="noopener"><svg class="icon"><use href="#i-pin"/></svg>Otvorite u Google mapama</a>
         </article>
-        <p class="offices-note">Pre dolaska nas pozovite, da se dogovorimo za termin.</p>
+        <p class="offices-note">Dolazak u kancelariju zakažite unapred telefonom.</p>
       </div>
     </div>
   </section>
 
 <script>
 (function(){
-  var v=document.getElementById('hero-video'),b=document.getElementById('hero-pause');if(!v)return;
+  var box=document.getElementById('hero-slides'),b=document.getElementById('hero-pause');if(!box)return;
+  var s=[].slice.call(box.querySelectorAll('.hero-slide')),i=0,t=null,stop=false,HOLD=6000;
   var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var sd=navigator.connection&&navigator.connection.saveData;
-  function set(p){if(p){v.pause();}else{var q=v.play();if(q&&q.catch)q.catch(function(){});}
-    b.setAttribute('aria-pressed',p);b.setAttribute('aria-label',p?'Pusti video':'Zaustavi video');b.classList.toggle('paused',p);}
-  if(rm||sd){v.removeAttribute('autoplay');v.preload='none';set(true);}
-  b.addEventListener('click',function(){set(!v.paused);});
+  if(rm||sd||s.length<2){b.style.display='none';return;}
+  function load(img,cb){if(img.dataset.src){img.src=img.dataset.src;img.removeAttribute('data-src');}
+    if(img.complete&&img.naturalWidth){cb();}else{img.addEventListener('load',cb,{once:true});img.addEventListener('error',cb,{once:true});}}
+  function next(){var n=(i+1)%s.length;load(s[n],function(){if(stop)return;s[i].classList.remove('is-active');s[n].classList.add('is-active');i=n;
+    load(s[(i+1)%s.length],function(){});plan();});}
+  function plan(){clearTimeout(t);if(!stop&&!document.hidden)t=setTimeout(next,HOLD);}
+  function set(p){stop=p;b.setAttribute('aria-pressed',p);b.setAttribute('aria-label',p?'Pusti smenu fotografija':'Zaustavi smenu fotografija');b.classList.toggle('paused',p);if(p)clearTimeout(t);else plan();}
+  b.addEventListener('click',function(){set(!stop);});
+  document.addEventListener('visibilitychange',plan);
+  function start(){load(s[1],function(){});plan();}
+  if(document.readyState==='complete')start();else window.addEventListener('load',start);
 })();
 </script>
 
@@ -882,7 +894,7 @@ p{margin:0}
           <li><a href="mailto:studiointergeo@gmail.com">studiointergeo@gmail.com</a></li>
           <li>Ruzveltova 4, Zvezdara</li>
           <li>Gročanska 6, Vračar</li>
-          <li>Svaki dan 07-21h</li>
+          <li>Svakog dana 7–21&nbsp;h</li>
         </ul>
       </div>
     </div>
@@ -898,7 +910,7 @@ p{margin:0}
       <span class="dc-avatar" aria-hidden="true">SM<i class="dc-dot"></i></span>
       <span class="dc-who">
         <strong id="dc-name">Slaviša Matić</strong>
-        <span class="dc-status" id="dc-status">Odgovaram lično, svaki dan od 7 do 21h</span>
+        <span class="dc-status" id="dc-status">Odgovaram lično, svaki dan od 7 do 21&nbsp;h</span>
       </span>
       <button class="dc-close" type="button" aria-label="Zatvori"><svg class="icon"><use href="#i-x"/></svg></button>
     </div>
@@ -908,7 +920,7 @@ p{margin:0}
         <span class="dc-avatar dc-avatar--sm" aria-hidden="true">SM</span>
         <div class="dc-bubble" id="dc-bubble">
           <span class="dc-typing" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span class="dc-text">Dobar dan, ja sam Slaviša.<br><br>Ako vas zanima legalizacija, katastar ili nešto oko parcele, pišite mi. Odgovaram lično, na Viberu ili WhatsApp-u.</span>
+          <span class="dc-text">Dobar dan, ja sam Slaviša Matić.<br><br>Za pitanja o legalizaciji, upisu u katastar ili parceli pišite mi na Viber ili WhatsApp. Odgovaram lično.</span>
         </div>
       </div>
     </div>
@@ -929,7 +941,7 @@ p{margin:0}
   function seen(){try{return sessionStorage.getItem('dc-seen')==='1'}catch(e){return false}}
   if(seen())d.classList.add('seen');
   try{var hr=parseInt(new Intl.DateTimeFormat('en-GB',{hour:'2-digit',hourCycle:'h23',timeZone:'Europe/Belgrade'}).format(new Date()),10);
-    if(hr<7||hr>=21){d.classList.add('away');document.getElementById('dc-status').textContent='Sada nisam tu. Javljam se od 7h ujutru';}}catch(e){}
+    if(hr<7||hr>=21){d.classList.add('away');document.getElementById('dc-status').textContent='Trenutno nisam dostupan. Odgovaram od 7\u00a0h';}}catch(e){}
   function setOpen(o){
     d.classList.toggle('open',o);t.setAttribute('aria-expanded',o);
     if(o){d.classList.add('seen');try{sessionStorage.setItem('dc-seen','1')}catch(e){}
