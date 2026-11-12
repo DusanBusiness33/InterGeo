@@ -652,6 +652,21 @@ h1,h2,h3{text-wrap:balance}
   .steps .n{width:40px;height:40px}
   .firm{padding:4px 22px 8px}
 }
+/* v2.1: dugmad i kratke rečenice uvek u jednom redu, na svakoj širini */
+.btn{white-space:nowrap}
+.foot-grid{grid-template-columns:minmax(0,1.42fr) minmax(0,1fr) minmax(0,.5fr) minmax(0,.8fr);gap:40px}
+.foot-brand p{max-width:none;font-size:.9rem}
+.foot-brand p span{display:block;white-space:nowrap}
+.topbar li{white-space:nowrap}
+@media (max-width:1020px){.foot-grid{grid-template-columns:1fr 1fr;gap:48px}.topbar .hide-m{display:none}}
+@media (max-width:768px){
+  .foot-grid{grid-template-columns:1fr;gap:36px}
+  .btn{white-space:nowrap;gap:10px;padding-left:16px;padding-right:16px;font-size:clamp(.86rem,4.3vw,1.0625rem)}
+  .btn--big{padding:18px 12px;font-size:clamp(.9rem,4.5vw,1.15rem)}
+  .foot-brand p{font-size:clamp(.74rem,3.8vw,.95rem)}
+  .kicker{white-space:nowrap;font-size:clamp(.58rem,2.95vw,.69rem);letter-spacing:.07em}
+  .foot-bottom span{white-space:nowrap;font-size:clamp(.72rem,3.7vw,.875rem)}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -825,11 +840,11 @@ h1,h2,h3{text-wrap:balance}
     <div class="foot-grid">
       <div class="foot-brand">
         <span class="logo-plate"><span class="logo-crop"><img src="intergeo-logo.jpeg" width="745" height="396" alt="INTERGEO, studio za geodetske poslove" loading="lazy"></span></span>
-        <p>Studio za geodetske poslove INTERGEO, Beograd. Licenca RGZ, rešenje br. 952-03-110/2016.</p>
+        <p><span>Studio za geodetske poslove INTERGEO – Beograd</span><span>Licenca RGZ, rešenje br. 952-03-110/2016</span></p>
       </div>
       <div>
         <h4>Usluge</h4>
-        <ul><li><a href="geodetski-snimak.html">Geodetski snimak</a></li><li><a href="ucrtavanje-u-katastar.html">Elaborat geodetskih radova / ucrtavanje objekata u katastar</a></li><li><a href="legalizacija.html">Legalizacija objekata</a></li><li><a href="katastarsko-topografski-plan.html">Katastarsko-topografski plan</a></li><li><a href="omedjavanje-parcele.html">Omeđavanje parcele</a></li><li><a href="deoba-parcele.html">Deoba parcele</a></li></ul>
+        <ul><li><a href="geodetski-snimak.html">Geodetski snimak</a></li><li><a href="ucrtavanje-u-katastar.html">Elaborat geodetskih radova</a></li><li><a href="legalizacija.html">Legalizacija objekata</a></li><li><a href="katastarsko-topografski-plan.html">Katastarsko-topografski plan</a></li><li><a href="omedjavanje-parcele.html">Omeđavanje parcele</a></li><li><a href="deoba-parcele.html">Deoba parcele</a></li></ul>
       </div>
       <div>
         <h4>Studio</h4>
