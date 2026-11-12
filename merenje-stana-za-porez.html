@@ -10,7 +10,7 @@
 <meta property="og:title" content="Merenje stana i poslovnog prostora za porez na imovinu | INTERGEO">
 <meta property="og:description" content="Porez na imovinu računa se prema korisnoj površini. Merimo stan, kuću ili poslovni prostor i računamo korisnu površinu po Zakonu o porezima na imovinu. 063 320 380.">
 <meta property="og:url" content="https://intergeo.rs/merenje-stana-za-porez.html">
-<meta name="theme-color" content="#1F5AAA">
+<meta name="theme-color" content="#0C1E3B">
 <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -162,14 +162,6 @@ p{margin:0}
 .refs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-strong);border-left:1px solid var(--line-strong)}
 .refs li{border-right:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);padding:24px 22px;font-family:var(--head);font-weight:600;font-size:1rem;line-height:1.35;color:var(--ink);min-height:96px;display:flex;align-items:center;background:#fff}
 
-/* all services list */
-.all{display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px;list-style:none;margin:0;padding:0}
-.all li{border-top:1px solid var(--line)}
-.all a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:15px 0;color:var(--ink);font-size:1rem;line-height:1.4}
-.all a:hover{color:var(--blue)}
-.all .icon{width:16px;height:16px;color:var(--line-strong);transition:color .15s ease,transform .15s ease}
-.all a:hover .icon{color:var(--blue);transform:translateX(3px)}
-.all-foot{margin-top:40px}
 
 /* contact */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
@@ -261,7 +253,6 @@ p{margin:0}
   .steps-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
   .reviews{grid-template-columns:1fr}
   .refs{grid-template-columns:repeat(3,1fr)}
-  .all{grid-template-columns:repeat(2,1fr)}
   .foot-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:768px){
@@ -282,7 +273,7 @@ p{margin:0}
   .hero .wrap{gap:56px}
   .lead{font-size:1.0625rem}
   .btn{white-space:normal;text-align:center}
-  .reviews-foot .btn,.all-foot .btn,.steps-intro .btn{width:100%}
+  .reviews-foot .btn,.steps-intro .btn{width:100%}
   .btn--big{font-size:1.15rem;padding:18px 22px;width:100%}
   .hero-actions{align-items:stretch}
   .rating{right:12px;bottom:-24px;padding:12px 14px}
@@ -296,7 +287,6 @@ p{margin:0}
   .steps li{grid-template-columns:48px 1fr;gap:12px}
   .refs{grid-template-columns:repeat(2,1fr)}
   .refs li{padding:18px 16px;font-size:.93rem;min-height:84px}
-  .all{grid-template-columns:1fr}
   .contact-lines a,.contact-lines strong{font-size:1.1rem}
   .chat-row .btn{flex:1 1 100%}
   .foot-grid{grid-template-columns:1fr;gap:36px}
@@ -391,38 +381,10 @@ p{margin:0}
 .cta-band .btn--ghost{color:#fff;border-color:#4C6A98}
 .cta-band .btn--ghost:hover{background:var(--navy-2);border-color:#fff;color:#fff}
 
-/* services overview page */
-.group{padding-top:72px}
-.group:first-child{padding-top:0}
-.group-head{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:start}
-.group-head h2{font-size:clamp(1.6rem,2.6vw,2.1rem)}
-.group-head p{color:var(--muted);margin-top:12px}
-.svc-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-strong)}
-.svc-list li{border-bottom:1px solid var(--line)}
-.svc-item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;padding:24px 0;align-items:start;scroll-margin-top:110px}
-.svc-item h3{font-size:1.15rem}
-.svc-item p{color:var(--muted);margin-top:6px;max-width:62ch;font-size:1rem}
-.svc-item .go{font-family:var(--head);font-weight:600;font-size:.93rem;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;padding-top:2px}
-.svc-item .go .icon{width:16px;height:16px}
-.svc-item.is-main h3::after{content:"Glavna usluga";margin-left:10px;font-family:var(--head);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);background:var(--tint);padding:3px 8px;border-radius:4px;vertical-align:3px}
-.svc-item:target{background:var(--tint);margin:0 -16px;padding:24px 16px}
 
-/* guides / glossary */
-.toc{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
-.toc a{border:1px solid var(--line-strong);border-radius:999px;padding:8px 16px;font-size:.93rem;font-weight:600;color:var(--ink);background:#fff}
-.toc a:hover{border-color:var(--blue);color:var(--blue)}
-.guide{padding:40px 0;border-top:1px solid var(--line);scroll-margin-top:100px}
 .guide:first-child{border-top:0;padding-top:0}
-.guide .tag{font-family:var(--head);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:700}
-.guide h2{margin-top:8px !important}
-.gloss{display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px;margin:0}
-.gloss div{padding:22px 0;border-top:1px solid var(--line)}
-.gloss dt{font-family:var(--head);font-weight:700;color:var(--ink);font-size:1.08rem}
-.gloss dd{margin:6px 0 0;color:var(--muted)}
-.note-date{font-size:.88rem;color:var(--muted)}
 
 /* about */
-.ph{background:repeating-linear-gradient(45deg,#EEF1F5,#EEF1F5 12px,#E6EAF0 12px,#E6EAF0 24px);border:1px solid var(--line-strong);border-radius:8px;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--head);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;color:#6B7689;min-height:320px;padding:24px}
 .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
 .values{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line-strong)}
 .values div{padding:30px 28px 30px 0}
@@ -446,7 +408,6 @@ p{margin:0}
 @media (max-width:1020px){
   .page-grid{grid-template-columns:1fr;gap:56px}
   .aside{position:static}
-  .group-head{grid-template-columns:1fr;gap:20px}
   .about-grid{grid-template-columns:1fr;gap:40px}
   .values{grid-template-columns:1fr}
   .values div,.values div+div{padding:24px 0;border-left:0;border-top:1px solid var(--line)}
@@ -460,25 +421,18 @@ p{margin:0}
   .facts{grid-template-columns:1fr}
   .facts div{border-left:0;border-top:1px solid var(--line)}
   .facts div:first-child{border-top:0}
-  .svc-item{grid-template-columns:1fr;gap:10px}
-  .svc-item.is-main h3::after{display:inline-block;margin:6px 0 0;vertical-align:0}
-  .gloss{grid-template-columns:1fr}
   .cta-band{padding:60px 0}
   .cta-band .acts{width:100%}
   .cta-band .btn{width:100%}
   .form .row{grid-template-columns:1fr}
   .form-box{padding:24px 20px}
   .form .acts .btn{width:100%}
-  .ph{min-height:220px}
 }
 
 .facts--2{grid-template-columns:repeat(2,1fr)}
 .facts--2 div:nth-child(3){border-left:0}
 .facts--2 div:nth-child(n+3){border-top:1px solid var(--line)}
 @media (max-width:768px){.facts--2{grid-template-columns:1fr}.facts--2 div:nth-child(n+2){border-top:1px solid var(--line)}}
-.guide>*+*{margin-top:16px}
-.guide>h2+p{margin-top:12px}
-.guide>h3{margin-top:30px}
 
 /* ===== početni hero: statične fotografije sa mekim pretapanjem ===== */
 .hero--video{padding:0;min-height:min(780px,calc(100vh - 126px));display:flex;align-items:center;background:var(--navy);color:#fff;isolation:isolate}
@@ -545,6 +499,159 @@ p{margin:0}
 .quote-mini{border-left:3px solid var(--yellow);padding:4px 0 4px 20px}
 .prose .quote-mini+.quote-mini{margin-top:22px}
 @media (max-width:860px){.daibau{grid-template-columns:1fr;gap:22px}}
+
+/* ===== nadogradnja v2 (novembar 2026): žuta iz logotipa nosi identitet, tamno zaglavlje sa žutim slovima, veći logo, pune ikonice, jedan spisak usluga ===== */
+:root{--navy-deep:#081529}
+::selection{background:var(--yellow);color:var(--navy)}
+h1,h2,h3{text-wrap:balance}
+.topbar :focus-visible,.header :focus-visible,.hero--video :focus-visible,.page-hero :focus-visible,.cta-band :focus-visible,.footer :focus-visible{outline-color:var(--yellow)}
+
+/* oznaka iznad naslova: žuta traka sa plavim verzalom, kao u logotipu */
+.kicker{gap:0;background:var(--yellow);color:var(--blue-dark);padding:6px 11px 5px;border-radius:3px;font-size:.75rem;font-weight:700;letter-spacing:.13em;line-height:1.3;margin-bottom:20px}
+.kicker::before{display:none}
+.hero--video .kicker{color:var(--blue-dark)}
+
+/* dugmad: žuto je poziv na akciju */
+.btn{background:var(--yellow);border-color:var(--yellow);color:var(--navy);box-shadow:inset 0 -2px 0 rgba(12,30,59,.18)}
+.btn:hover{background:var(--navy);border-color:var(--navy);color:var(--yellow);box-shadow:none}
+.btn--ghost{background:transparent;border-color:var(--navy);color:var(--navy);box-shadow:none}
+.btn--ghost:hover{background:var(--navy);border-color:var(--navy);color:var(--yellow)}
+.header .btn,.hero--video .btn,.page-hero .btn,.cta-band .btn{background:var(--yellow);border-color:var(--yellow);color:var(--navy)}
+.header .btn:hover,.hero--video .btn:hover,.page-hero .btn:hover,.cta-band .btn:hover{background:#fff;border-color:#fff;color:var(--navy)}
+.cta-band .btn--ghost{background:transparent;border-color:rgba(255,255,255,.45);color:#fff;box-shadow:none}
+.cta-band .btn--ghost:hover{background:transparent;border-color:var(--yellow);color:var(--yellow)}
+
+/* gornja traka i zaglavlje */
+.topbar{background:var(--navy-deep);color:#B9C6DB}
+.topbar .icon{color:var(--yellow)}
+.header{background:var(--navy);border-bottom:1px solid rgba(255,255,255,.09)}
+.header .wrap{min-height:102px;transition:min-height .2s ease}
+.brand .logo-crop{--lh:74px}
+.nav ul{gap:4px}
+.nav a.link{position:relative;padding:12px 14px;color:var(--yellow);font-weight:700;font-size:.9rem;letter-spacing:.09em;text-transform:uppercase;border-radius:0}
+.nav a.link::after{content:"";position:absolute;left:14px;right:14px;bottom:4px;height:2px;background:var(--yellow);transform:scaleX(0);transform-origin:left center;transition:transform .22s cubic-bezier(.16,1,.3,1)}
+.nav a.link:hover{color:#fff;background:none}
+.nav a.link:hover::after,.nav a.link[aria-current="page"]::after{transform:scaleX(1)}
+.nav a.link[aria-current="page"]{color:var(--yellow)}
+.nav .btn{margin-left:20px}
+.menu-btn{border-color:rgba(255,255,255,.3);color:var(--yellow)}
+
+/* logo: isti originalni fajl, isečen tačno po ivici znaka (zaobljeni gornji desni i donji levi ugao), da stoji i na tamnoj podlozi */
+.logo-crop{width:calc(var(--lh)*2.7318);border-radius:0 calc(var(--lh)*.11) 0 calc(var(--lh)*.11);transition:height .2s ease,width .2s ease}
+.logo-crop img{width:123.96%;left:-11.148%;top:-35.909%}
+.logo-plate{background:none;border-radius:0;padding:0}
+.foot-brand .logo-crop{--lh:62px}
+
+/* početna: hero i žuta traka ispod njega (plavo polje + žuta traka, kao u logotipu) */
+.hero--video{min-height:min(780px,calc(100vh - 145px))}
+.trust{--line:rgba(12,30,59,.17);background:var(--yellow);border:0}
+.trust .icon{color:var(--navy)}
+.trust strong{color:var(--navy)}
+.trust span{color:#27324B}
+
+/* najtraženije usluge: pune ikonice na žutoj pločici */
+.service{transition:background .2s ease,color .2s ease}
+.service h3,.service p,.service .more{transition:color .2s ease}
+.service .ico{--tile:var(--yellow);width:76px;height:76px;border-radius:12px;background:var(--yellow);color:var(--navy);margin-bottom:26px}
+.uicon{display:block;flex:none;width:50px;height:50px}
+.service:hover{background:var(--navy);color:#C6D2E4}
+.service:hover h3{color:#fff}
+.service:hover p{color:#C0CCDF}
+.service:hover .ico{background:var(--yellow);color:var(--navy)}
+.service:hover .more{color:var(--yellow)}
+
+/* spisak svih usluga, redom kako ih je naveo studio */
+.ulist{list-style:none;margin:0;padding:0;columns:2;column-gap:64px;border-top:1px solid var(--line-strong)}
+.ulist li{break-inside:avoid;border-bottom:1px solid var(--line)}
+.ulist .row{display:grid;grid-template-columns:36px minmax(0,1fr) 18px;gap:16px;align-items:center;min-height:62px;padding:12px 0;color:var(--ink);font-family:var(--head);font-weight:600;font-size:1.03rem;line-height:1.35}
+.ulist .no{width:36px;height:36px;border-radius:7px;background:var(--yellow);color:var(--navy);font-weight:800;font-size:.86rem;font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:center;transition:background .15s ease,color .15s ease}
+.ulist .row .icon{width:18px;height:18px;color:var(--blue);transition:transform .15s ease}
+.ulist a.row:hover{color:var(--blue)}
+.ulist a.row:hover .no{background:var(--navy);color:var(--yellow)}
+.ulist a.row:hover .icon{transform:translateX(4px)}
+.ulist--3{columns:3;column-gap:44px}
+.ulist--3 .row{font-size:.98rem;min-height:58px}
+.ulist-note{margin-top:30px;color:var(--muted);max-width:70ch}
+.ulist-note a{font-weight:600;border-bottom:1px solid rgba(31,90,170,.35)}
+.ulist-foot{margin-top:38px;display:flex;gap:12px;flex-wrap:wrap}
+
+/* koraci */
+.steps .n{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:8px;background:var(--yellow);color:var(--navy);padding-top:0;font-size:.98rem}
+
+/* unutrašnje stranice: tamni hero sa koordinatnom mrežom i žutom trakom */
+.page-hero{background-color:var(--navy);background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);border-bottom:6px solid var(--yellow);color:#C9D4E6}
+.page-hero::after{background:linear-gradient(90deg,var(--navy) 26%,rgba(12,30,59,.3) 100%)}
+.page-hero h1{color:#fff}
+.page-hero .lead{color:#CDD7E7}
+.page-hero .hero-note{color:#B8C6DC}
+.page-hero .hero-note a{color:#fff}
+.crumbs{color:#9DAECB}
+.crumbs a{color:#C9D4E6}
+.crumbs a:hover{color:var(--yellow)}
+.crumbs li+li::before{color:#566B8F}
+
+/* O nama: podaci o firmi */
+.about-grid{align-items:start}
+.firm{background:var(--navy);color:#C9D4E6;border-radius:12px;border-top:6px solid var(--yellow);padding:8px 32px 12px}
+.firm dl{margin:0}
+.firm dl>div{padding:20px 0;border-top:1px solid rgba(255,255,255,.12)}
+.firm dl>div:first-child{border-top:0}
+.firm dt{font-family:var(--head);font-size:.75rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--yellow)}
+.firm dd{margin:7px 0 0;font-family:var(--head);font-weight:600;font-size:1.12rem;line-height:1.4;color:#fff}
+.firm dd small{display:block;margin-top:3px;font-family:var(--body);font-weight:400;font-size:.95rem;color:#B8C6DC}
+
+/* cene: od čega zavisi cena */
+.factors{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line-strong)}
+.factors li{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;padding:22px 0;border-bottom:1px solid var(--line)}
+.factors li:nth-child(odd){padding-right:26px}
+.factors li:nth-child(even){padding-left:26px;border-left:1px solid var(--line)}
+.factors .fi{width:44px;height:44px;border-radius:8px;background:var(--yellow);color:var(--navy);display:flex;align-items:center;justify-content:center}
+.factors .fi .icon{width:24px;height:24px}
+.factors strong{display:block;font-family:var(--head);font-size:1.08rem;line-height:1.3;color:var(--ink)}
+.factors div span{display:block;margin-top:5px;color:var(--muted);font-size:.98rem;line-height:1.55}
+
+/* futer */
+.footer{border-top-width:6px}
+.footer h4{color:var(--yellow)}
+.foot-bottom{border-top-color:rgba(255,255,255,.12)}
+
+/* prozor za poruke */
+.dc-toggle{background:var(--navy);border-color:var(--navy);color:#fff;box-shadow:0 8px 24px rgba(8,21,41,.3)}
+.dc-toggle:hover{border-color:var(--yellow)}
+.dc-toggle-ic{background:var(--yellow);color:var(--navy)}
+.dc-head{border-bottom:4px solid var(--yellow)}
+.dc-avatar{background:#205AAB}
+.dc-avatar img{width:100%;height:100%;max-width:none;border-radius:50%;object-fit:cover}
+
+@media (min-width:1021px){
+  .header.is-stuck .wrap{min-height:74px}
+  .header.is-stuck .brand .logo-crop{--lh:54px}
+}
+@media (max-width:1020px){
+  .header.open .nav ul{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);border-bottom:6px solid var(--yellow);padding:6px 24px 20px;gap:0;box-shadow:0 30px 50px rgba(8,21,41,.4)}
+  .header.open .nav a.link{display:flex;align-items:center;justify-content:space-between;padding:19px 2px;border-bottom:1px solid rgba(255,255,255,.1);font-size:1.12rem;letter-spacing:.08em}
+  .header.open .nav li:last-child a.link{border-bottom:0}
+  .header.open .nav a.link::after{position:static;flex:none;width:9px;height:9px;margin-right:4px;background:none;border-top:2px solid var(--yellow);border-right:2px solid var(--yellow);transform:rotate(45deg);transition:none}
+  .ulist{column-gap:40px}
+  .ulist--3{columns:2}
+  .factors{grid-template-columns:1fr}
+  .factors li:nth-child(odd){padding-right:0}
+  .factors li:nth-child(even){padding-left:0;border-left:0}
+}
+@media (max-width:768px){
+  .header .wrap{min-height:76px}
+  .brand .logo-crop{--lh:54px}
+  .call-mobile{background:var(--yellow);color:var(--navy)}
+  .hero--video{min-height:auto}
+  .kicker{font-size:.69rem;letter-spacing:.09em;padding:5px 9px 4px}
+  .service .ico{width:68px;height:68px;margin-bottom:20px}
+  .uicon{width:44px;height:44px}
+  .ulist,.ulist--3{columns:1}
+  .ulist .row,.ulist--3 .row{font-size:1rem;min-height:58px}
+  .ulist-foot .btn{flex:1 1 100%}
+  .steps .n{width:40px;height:40px}
+  .firm{padding:4px 22px 8px}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -610,11 +717,11 @@ p{margin:0}
 
 <header class="header" id="header">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="INTERGEO, studio za geodetske poslove – početna">
+    <a class="brand" href="index.html" aria-label="Studio za geodetske poslove INTERGEO – početna">
       <span class="logo-crop"><img src="intergeo-logo.jpeg" width="745" height="396" alt="INTERGEO, studio za geodetske poslove"></span>
     </a>
     <nav class="nav" aria-label="Glavni meni">
-      <ul id="meni"><li><a class="link" href="usluge.html" aria-current="page">Usluge</a></li><li><a class="link" href="cena-usluge.html">Cena usluge</a></li><li><a class="link" href="o-nama.html">O nama</a></li><li><a class="link" href="korisne-informacije.html">Korisne informacije</a></li><li><a class="link" href="kontakt.html">Kontakt</a></li></ul>
+      <ul id="meni"><li><a class="link" href="o-nama.html">O nama</a></li><li><a class="link" href="usluge.html" aria-current="page">Usluge</a></li><li><a class="link" href="cena-usluge.html">Cene usluga</a></li><li><a class="link" href="kontakt.html">Kontakt</a></li></ul>
       <a class="btn" href="tel:+38163320380"><svg class="icon"><use href="#i-phone"/></svg>063 320 380</a>
       <a class="call-mobile" href="tel:+38163320380" aria-label="Pozovite 063 320 380"><svg class="icon"><use href="#i-phone"/></svg></a>
       <button class="menu-btn" type="button" aria-controls="meni" aria-expanded="false" aria-label="Otvori meni"><svg class="icon i-open"><use href="#i-menu"/></svg><svg class="icon i-close"><use href="#i-x"/></svg></button>
@@ -697,9 +804,9 @@ p{margin:0}
     </div>
   </div>
   <div class="card card-links">
-    <h3>Glavne usluge</h3>
-    <ul><li><a href="upis-stana-u-katastar.html">Nalaz veštaka i upis stana <svg class="icon"><use href="#i-arrow"/></svg></a></li><li><a href="legalizacija.html">Legalizacija <svg class="icon"><use href="#i-arrow"/></svg></a></li><li><a href="ucrtavanje-u-katastar.html">Ucrtavanje objekata u katastar <svg class="icon"><use href="#i-arrow"/></svg></a></li><li><a href="omedjavanje-parcele.html">Omeđavanje parcela <svg class="icon"><use href="#i-arrow"/></svg></a></li><li><a href="deoba-parcele.html">Deoba parcela <svg class="icon"><use href="#i-arrow"/></svg></a></li><li><a href="geodetski-snimak.html">Geodetski snimak <svg class="icon"><use href="#i-arrow"/></svg></a></li></ul>
-    <ul><li><a href="usluge.html">Sve usluge <svg class="icon"><use href="#i-arrow"/></svg></a></li></ul>
+    <h3>Usluge</h3>
+    <ul><li><a href="geodetski-snimak.html">Geodetski snimak <svg class="icon"><use href="#i-arrow"/></svg></a></li><li><a href="ucrtavanje-u-katastar.html">Elaborat geodetskih radova / ucrtavanje objekata u katastar <svg class="icon"><use href="#i-arrow"/></svg></a></li><li><a href="legalizacija.html">Legalizacija objekata <svg class="icon"><use href="#i-arrow"/></svg></a></li><li><a href="omedjavanje-parcele.html">Omeđavanje parcele <svg class="icon"><use href="#i-arrow"/></svg></a></li><li><a href="deoba-parcele.html">Deoba parcele <svg class="icon"><use href="#i-arrow"/></svg></a></li><li><a href="upis-stana-u-katastar.html">Nalaz i mišljenje veštaka građevinske struke <svg class="icon"><use href="#i-arrow"/></svg></a></li></ul>
+    <ul><li><a href="usluge.html">Svih 30 usluga <svg class="icon"><use href="#i-arrow"/></svg></a></li></ul>
   </div>
 </aside>
   </div>
@@ -725,19 +832,18 @@ p{margin:0}
     <div class="foot-grid">
       <div class="foot-brand">
         <span class="logo-plate"><span class="logo-crop"><img src="intergeo-logo.jpeg" width="745" height="396" alt="INTERGEO, studio za geodetske poslove" loading="lazy"></span></span>
-        <p>Studio za geodetske poslove sa licencom RGZ. Legalizacija, upis u katastar, omeđavanje i deoba parcela u Beogradu.</p>
+        <p>Studio za geodetske poslove INTERGEO, Beograd. Licenca RGZ, rešenje br. 952-03-110/2016.</p>
       </div>
       <div>
         <h4>Usluge</h4>
-        <ul><li><a href="upis-stana-u-katastar.html">Nalaz veštaka i upis stana</a></li><li><a href="legalizacija.html">Legalizacija</a></li><li><a href="ucrtavanje-u-katastar.html">Ucrtavanje objekata u katastar</a></li><li><a href="omedjavanje-parcele.html">Omeđavanje parcela</a></li><li><a href="deoba-parcele.html">Deoba parcela</a></li><li><a href="geodetski-snimak.html">Geodetski snimak</a></li><li><a href="katastarsko-topografski-plan.html">Katastarsko-topografski plan</a></li></ul>
+        <ul><li><a href="geodetski-snimak.html">Geodetski snimak</a></li><li><a href="ucrtavanje-u-katastar.html">Elaborat geodetskih radova / ucrtavanje objekata u katastar</a></li><li><a href="legalizacija.html">Legalizacija objekata</a></li><li><a href="katastarsko-topografski-plan.html">Katastarsko-topografski plan</a></li><li><a href="omedjavanje-parcele.html">Omeđavanje parcele</a></li><li><a href="deoba-parcele.html">Deoba parcele</a></li><li><a href="usluge.html">Svih 30 usluga</a></li></ul>
       </div>
       <div>
         <h4>Studio</h4>
         <ul>
           <li><a href="o-nama.html">O nama</a></li>
-          <li><a href="usluge.html">Sve usluge</a></li>
-          <li><a href="cena-usluge.html">Cena usluge</a></li>
-          <li><a href="korisne-informacije.html">Korisne informacije</a></li>
+          <li><a href="usluge.html">Usluge</a></li>
+          <li><a href="cena-usluge.html">Cene usluga</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
       </div>
@@ -753,7 +859,7 @@ p{margin:0}
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 INTERGEO, studio za geodetske poslove</span>
+      <span>© 2026 Studio za geodetske poslove INTERGEO</span>
     </div>
   </div>
 </footer>
@@ -761,20 +867,20 @@ p{margin:0}
 <div class="dc" id="dc">
   <div class="dc-panel" id="dc-panel" role="dialog" aria-modal="false" aria-labelledby="dc-name">
     <div class="dc-head">
-      <span class="dc-avatar" aria-hidden="true">SM<i class="dc-dot"></i></span>
+      <span class="dc-avatar" aria-hidden="true"><img src="apple-touch-icon.png" width="52" height="52" alt="" loading="lazy"><i class="dc-dot"></i></span>
       <span class="dc-who">
-        <strong id="dc-name">Slaviša Matić</strong>
-        <span class="dc-status" id="dc-status">Odgovaram lično, svaki dan od 7 do 21&nbsp;h</span>
+        <strong id="dc-name">Studio INTERGEO</strong>
+        <span class="dc-status" id="dc-status">Odgovaramo svakog dana od 7 do 21&nbsp;h</span>
       </span>
       <button class="dc-close" type="button" aria-label="Zatvori"><svg class="icon"><use href="#i-x"/></svg></button>
     </div>
     <div class="dc-body">
       <span class="dc-time" id="dc-time"></span>
       <div class="dc-msg">
-        <span class="dc-avatar dc-avatar--sm" aria-hidden="true">SM</span>
+        <span class="dc-avatar dc-avatar--sm" aria-hidden="true"><img src="apple-touch-icon.png" width="30" height="30" alt="" loading="lazy"></span>
         <div class="dc-bubble" id="dc-bubble">
           <span class="dc-typing" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span class="dc-text">Dobar dan, ja sam Slaviša Matić.<br><br>Za pitanja o legalizaciji, upisu u katastar ili parceli pišite mi na Viber ili WhatsApp. Odgovaram lično.</span>
+          <span class="dc-text">Dobar dan, ovde Studio za geodetske poslove INTERGEO.<br><br>Za pitanja o legalizaciji, upisu u katastar ili parceli pišite nam na Viber ili WhatsApp.</span>
         </div>
       </div>
     </div>
@@ -784,18 +890,20 @@ p{margin:0}
     </div>
     <a class="dc-call" href="tel:+38163320380">ili pozovite 063 320 380</a>
   </div>
-  <button class="dc-toggle" type="button" aria-expanded="false" aria-controls="dc-panel"><span class="dc-toggle-ic"><svg class="icon"><use href="#i-chat"/></svg></span><span class="label">Pitajte me</span><i class="dc-badge" aria-hidden="true"></i></button>
+  <button class="dc-toggle" type="button" aria-expanded="false" aria-controls="dc-panel"><span class="dc-toggle-ic"><svg class="icon"><use href="#i-chat"/></svg></span><span class="label">Pitajte nas</span><i class="dc-badge" aria-hidden="true"></i></button>
 </div>
 
 <script>
 (function(){
   var h=document.getElementById('header'),b=h.querySelector('.menu-btn');
   b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Zatvori meni':'Otvori meni');});
+  var st=false;function stuck(){var y=window.pageYOffset||0;if(!st&&y>170){st=true;h.classList.add('is-stuck');}else if(st&&y<60){st=false;h.classList.remove('is-stuck');}}
+  window.addEventListener('scroll',stuck,{passive:true});stuck();
   var d=document.getElementById('dc'),t=d.querySelector('.dc-toggle'),typed=false;
   function seen(){try{return sessionStorage.getItem('dc-seen')==='1'}catch(e){return false}}
   if(seen())d.classList.add('seen');
   try{var hr=parseInt(new Intl.DateTimeFormat('en-GB',{hour:'2-digit',hourCycle:'h23',timeZone:'Europe/Belgrade'}).format(new Date()),10);
-    if(hr<7||hr>=21){d.classList.add('away');document.getElementById('dc-status').textContent='Trenutno nisam dostupan. Odgovaram od 7\u00a0h';}}catch(e){}
+    if(hr<7||hr>=21){d.classList.add('away');document.getElementById('dc-status').textContent='Trenutno nismo dostupni. Odgovaramo od 7\u00a0h';}}catch(e){}
   function setOpen(o){
     d.classList.toggle('open',o);t.setAttribute('aria-expanded',o);
     if(o){d.classList.add('seen');try{sessionStorage.setItem('dc-seen','1')}catch(e){}
