@@ -3,13 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>INTERGEO – geometar Beograd | Legalizacija, katastar, omeđavanje</title>
-<meta name="description" content="Studio za geodetske poslove INTERGEO: legalizacija, ucrtavanje objekta u katastar, omeđavanje i parcelisanje. Kancelarije na Zvezdari i Vračaru. Pozovite 063 320 380.">
+<title>Geometar Beograd | Studio za geodetske poslove INTERGEO</title>
+<meta name="description" content="Geometar u Beogradu: geodetski snimak, ucrtavanje objekata u katastar, legalizacija, omeđavanje i deoba parcela. Studio INTERGEO, Vračar i Zvezdara. 063 320 380.">
 <link rel="canonical" href="https://intergeo.rs/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="INTERGEO – studio za geodetske poslove, Beograd">
-<meta property="og:description" content="Studio za geodetske poslove INTERGEO: legalizacija, ucrtavanje objekta u katastar, omeđavanje i parcelisanje. Kancelarije na Zvezdari i Vračaru. Pozovite 063 320 380.">
+<meta property="og:title" content="Geometar Beograd | Studio za geodetske poslove INTERGEO">
+<meta property="og:description" content="Geometar u Beogradu: geodetski snimak, ucrtavanje objekata u katastar, legalizacija, omeđavanje i deoba parcela. Studio INTERGEO, Vračar i Zvezdara. 063 320 380.">
 <meta property="og:url" content="https://intergeo.rs/">
+<meta property="og:image" content="https://intergeo.rs/intergeo-hero-geometar.jpg">
+<meta property="og:locale" content="sr_RS">
+<meta property="og:site_name" content="Studio za geodetske poslove INTERGEO">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0C1E3B">
 <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -19,36 +23,299 @@
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
- "@type": "ProfessionalService",
- "name": "Studio za geodetske poslove INTERGEO",
- "url": "https://intergeo.rs/",
- "logo": "https://intergeo.rs/intergeo-logo.jpeg",
- "image": "https://intergeo.rs/intergeo-logo.jpeg",
- "telephone": "+381 63 320 380",
- "email": "studiointergeo@gmail.com",
- "areaServed": "Beograd",
- "openingHours": "Mo-Su 07:00-21:00",
- "address": [
+ "@graph": [
   {
-   "@type": "PostalAddress",
-   "streetAddress": "Ruzveltova 4",
-   "addressLocality": "Beograd",
-   "addressRegion": "Zvezdara",
-   "addressCountry": "RS"
+   "@type": "ProfessionalService",
+   "@id": "https://intergeo.rs/#studio",
+   "name": "Studio za geodetske poslove INTERGEO",
+   "alternateName": "INTERGEO",
+   "description": "Studio za geodetske poslove u Beogradu: geodetski snimak, ucrtavanje objekata u katastar, legalizacija, etažiranje, omeđavanje i deoba parcela.",
+   "url": "https://intergeo.rs/",
+   "logo": "https://intergeo.rs/intergeo-logo.jpeg",
+   "image": "https://intergeo.rs/intergeo-hero-geometar.jpg",
+   "telephone": "+381 63 320 380",
+   "email": "studiointergeo@gmail.com",
+   "foundingDate": "2016",
+   "areaServed": {
+    "@type": "City",
+    "name": "Beograd"
+   },
+   "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+     "Monday",
+     "Tuesday",
+     "Wednesday",
+     "Thursday",
+     "Friday",
+     "Saturday",
+     "Sunday"
+    ],
+    "opens": "07:00",
+    "closes": "21:00"
+   },
+   "address": [
+    {
+     "@type": "PostalAddress",
+     "streetAddress": "Ruzveltova 4",
+     "addressLocality": "Beograd",
+     "addressRegion": "Zvezdara",
+     "addressCountry": "RS"
+    },
+    {
+     "@type": "PostalAddress",
+     "streetAddress": "Gročanska 6",
+     "addressLocality": "Beograd",
+     "addressRegion": "Vračar",
+     "addressCountry": "RS"
+    }
+   ],
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 44.8061284,
+    "longitude": 20.4793719
+   },
+   "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJj9ctrYd7WkcRUtGckUCigCw",
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Geodetske usluge",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Geodetski snimak",
+       "url": "https://intergeo.rs/geodetski-snimak.html"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Elaborat geodetskih radova / ucrtavanje objekata u katastar",
+       "url": "https://intergeo.rs/ucrtavanje-u-katastar.html"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Legalizacija objekata",
+       "url": "https://intergeo.rs/legalizacija.html"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Specifikacija posebnih delova objekta – etažiranje"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Katastarsko-topografski plan",
+       "url": "https://intergeo.rs/katastarsko-topografski-plan.html"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Topografski plan"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Odvajanje javnog od ostalog građevinskog zemljišta – odvajanje javne saobraćajnice",
+       "url": "https://intergeo.rs/odvajanje-javne-saobracajnice.html"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Spajanje parcela istih vlasnika"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Omeđavanje parcele",
+       "url": "https://intergeo.rs/omedjavanje-parcele.html"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Deoba parcele",
+       "url": "https://intergeo.rs/deoba-parcele.html"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Skica načina korišćenja parcele"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Identifikacija parcele na terenu"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Projekat preparcelacije"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Geodetski snimak temelja",
+       "url": "https://intergeo.rs/geodetski-snimak-temelja.html"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Obeležavanje temelja"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Geodetski snimak izvedenog objekta u konstruktivnom smislu",
+       "url": "https://intergeo.rs/geodetski-snimak-konstrukcije.html"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Dobijanje kućnog broja",
+       "url": "https://intergeo.rs/kucni-broj.html"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Nalaz i mišljenje veštaka građevinske struke",
+       "url": "https://intergeo.rs/upis-stana-u-katastar.html"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Uklanjanje / brisanje objekata iz katastra"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Elaborat geodetskih radova podzemnih instalacija"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Tehnički prijem objekata – upotrebna dozvola"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Merenje udaljenosti kladionica do škole"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Merenje stana, kuće, poslovnog prostora radi tačne površine / poreza",
+       "url": "https://intergeo.rs/merenje-stana-za-porez.html"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Računanje kubature iskopa i nasipa"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Uverenje o kućnom broju"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Uverenje o istorijatu promena na nepokretnosti"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Izdavanje uverenja o prethodnim zahtevima na parceli / objektu / posebnom delu objekta"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Kopija plana"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Kopija plana podzemnih instalacija"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "List nepokretnosti"
+      }
+     }
+    ]
+   }
   },
   {
-   "@type": "PostalAddress",
-   "streetAddress": "Gročanska 6",
-   "addressLocality": "Beograd",
-   "addressRegion": "Vračar",
-   "addressCountry": "RS"
+   "@type": "WebSite",
+   "@id": "https://intergeo.rs/#sajt",
+   "url": "https://intergeo.rs/",
+   "name": "Studio za geodetske poslove INTERGEO",
+   "inLanguage": "sr-Latn",
+   "publisher": {
+    "@id": "https://intergeo.rs/#studio"
+   }
   }
- ],
- "geo": {
-  "@type": "GeoCoordinates",
-  "latitude": 44.8061284,
-  "longitude": 20.4793719
- }
+ ]
 }
 </script>
 <style>

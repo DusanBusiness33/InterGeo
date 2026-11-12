@@ -10,6 +10,10 @@
 <meta property="og:title" content="Kontakt – INTERGEO geodetski studio, Zvezdara i Vračar | 063 320 380">
 <meta property="og:description" content="Pozovite 063 320 380 ili pišite na Viber, WhatsApp ili studiointergeo@gmail.com. Kancelarije: Ruzveltova 4 (Zvezdara) i Gročanska 6 (Vračar). Svakog dana od 7 do 21 h.">
 <meta property="og:url" content="https://intergeo.rs/kontakt.html">
+<meta property="og:image" content="https://intergeo.rs/intergeo-hero-geometar.jpg">
+<meta property="og:locale" content="sr_RS">
+<meta property="og:site_name" content="Studio za geodetske poslove INTERGEO">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0C1E3B">
 <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -19,34 +23,86 @@
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
- "@type": "ProfessionalService",
- "name": "INTERGEO - Studio za geodetske poslove",
- "url": "https://intergeo.rs/",
- "telephone": "+381 63 320 380",
- "email": "studiointergeo@gmail.com",
- "areaServed": "Beograd",
- "openingHours": "Mo-Su 07:00-21:00",
- "address": [
+ "@graph": [
   {
-   "@type": "PostalAddress",
-   "streetAddress": "Ruzveltova 4",
-   "addressLocality": "Beograd",
-   "addressRegion": "Zvezdara",
-   "addressCountry": "RS"
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Početna",
+     "item": "https://intergeo.rs/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Kontakt",
+     "item": "https://intergeo.rs/kontakt.html"
+    }
+   ]
   },
   {
-   "@type": "PostalAddress",
-   "streetAddress": "Gročanska 6",
-   "addressLocality": "Beograd",
-   "addressRegion": "Vračar",
-   "addressCountry": "RS"
+   "@type": "ContactPage",
+   "url": "https://intergeo.rs/kontakt.html",
+   "name": "Kontakt – INTERGEO geodetski studio, Zvezdara i Vračar | 063 320 380",
+   "about": {
+    "@id": "https://intergeo.rs/#studio"
+   }
+  },
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://intergeo.rs/#studio",
+   "name": "Studio za geodetske poslove INTERGEO",
+   "alternateName": "INTERGEO",
+   "description": "Studio za geodetske poslove u Beogradu: geodetski snimak, ucrtavanje objekata u katastar, legalizacija, etažiranje, omeđavanje i deoba parcela.",
+   "url": "https://intergeo.rs/",
+   "logo": "https://intergeo.rs/intergeo-logo.jpeg",
+   "image": "https://intergeo.rs/intergeo-hero-geometar.jpg",
+   "telephone": "+381 63 320 380",
+   "email": "studiointergeo@gmail.com",
+   "foundingDate": "2016",
+   "areaServed": {
+    "@type": "City",
+    "name": "Beograd"
+   },
+   "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+     "Monday",
+     "Tuesday",
+     "Wednesday",
+     "Thursday",
+     "Friday",
+     "Saturday",
+     "Sunday"
+    ],
+    "opens": "07:00",
+    "closes": "21:00"
+   },
+   "address": [
+    {
+     "@type": "PostalAddress",
+     "streetAddress": "Ruzveltova 4",
+     "addressLocality": "Beograd",
+     "addressRegion": "Zvezdara",
+     "addressCountry": "RS"
+    },
+    {
+     "@type": "PostalAddress",
+     "streetAddress": "Gročanska 6",
+     "addressLocality": "Beograd",
+     "addressRegion": "Vračar",
+     "addressCountry": "RS"
+    }
+   ],
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 44.8061284,
+    "longitude": 20.4793719
+   },
+   "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJj9ctrYd7WkcRUtGckUCigCw"
   }
- ],
- "geo": {
-  "@type": "GeoCoordinates",
-  "latitude": 44.8061284,
-  "longitude": 20.4793719
- }
+ ]
 }
 </script>
 <style>

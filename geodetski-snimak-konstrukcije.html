@@ -10,6 +10,10 @@
 <meta property="og:title" content="Geodetski snimak konstrukcije objekta | INTERGEO Beograd">
 <meta property="og:description" content="Uz izjavu o završetku objekta u konstruktivnom smislu izvođač prilaže geodetski snimak objekta (Zakon o planiranju i izgradnji, član 152). Snimamo objekat i poredimo ga sa dozvolom.">
 <meta property="og:url" content="https://intergeo.rs/geodetski-snimak-konstrukcije.html">
+<meta property="og:image" content="https://intergeo.rs/intergeo-hero-geometar.jpg">
+<meta property="og:locale" content="sr_RS">
+<meta property="og:site_name" content="Studio za geodetske poslove INTERGEO">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0C1E3B">
 <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -671,20 +675,48 @@ h1,h2,h3{text-wrap:balance}
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
- "@type": "Service",
- "name": "Geodetski snimak konstrukcije objekta",
- "serviceType": "Geodetski snimak konstrukcije objekta",
- "url": "https://intergeo.rs/geodetski-snimak-konstrukcije.html",
- "areaServed": {
-  "@type": "City",
-  "name": "Beograd"
- },
- "provider": {
-  "@type": "ProfessionalService",
-  "name": "INTERGEO - Studio za geodetske poslove",
-  "url": "https://intergeo.rs/",
-  "telephone": "+381 63 320 380"
- }
+ "@graph": [
+  {
+   "@type": "Service",
+   "name": "Geodetski snimak konstrukcije objekta",
+   "serviceType": "Geodetski snimak konstrukcije objekta",
+   "url": "https://intergeo.rs/geodetski-snimak-konstrukcije.html",
+   "areaServed": {
+    "@type": "City",
+    "name": "Beograd"
+   },
+   "provider": {
+    "@type": "ProfessionalService",
+    "@id": "https://intergeo.rs/#studio",
+    "name": "Studio za geodetske poslove INTERGEO",
+    "url": "https://intergeo.rs/",
+    "telephone": "+381 63 320 380"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Početna",
+     "item": "https://intergeo.rs/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Usluge",
+     "item": "https://intergeo.rs/usluge.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Geodetski snimak konstrukcije objekta",
+     "item": "https://intergeo.rs/geodetski-snimak-konstrukcije.html"
+    }
+   ]
+  }
+ ]
 }
 </script>
 </head>

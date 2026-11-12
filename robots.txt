@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://intergeo.rs/sitemap.xml
